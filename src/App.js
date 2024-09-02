@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Hero from "./components/Hero";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Navbar from "./components/Navbar";
+import Herotxt from "./components/Herotxt";
+import Intro from "./components/intro";
+import FloatingText from "./components/Floating";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  const [shownav, setShowNav] = useState(false);
+
+  setTimeout(() => {
+    setShowNav(true);
+  }, 3300);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Hero />
+      {shownav ? <Navbar /> : null}
+      {shownav ? <Herotxt /> : null}
+      {shownav ? <Intro /> : null}
+      {/* {shownav ? <FloatingText /> : null} */}
+    </>
   );
 }
 
