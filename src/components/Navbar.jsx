@@ -27,11 +27,11 @@ const navigation = [
         <path
           style={{
             fill: "none",
-            strokeWidth: 4,
+            strokeWidth: 4.5,
             strokeLinejoin: "round",
             strokeMiterlimit: 10,
           }}
-          className="stroke-white group-hover:stroke-teal-500 transition duration-200"
+          className="stroke-gray-600 group-hover:stroke-teal-500 transition duration-200"
           d="M8.5,41.5h10c0.552,0,1-0.448,1-1v-10c0-1.105,0.895-2,2-2h5c1.105,0,2,0.895,2,2v10c0,0.552,0.448,1,1,1h10c0.552,0,1-0.448,1-1V21.411c0-1.838-0.843-3.575-2.287-4.713L24,5.5L9.787,16.698C8.343,17.836,7.5,19.573,7.5,21.411V40.5C7.5,41.052,7.948,41.5,8.5,41.5z"
         />
       </svg>
@@ -61,7 +61,7 @@ const navigation = [
     name: "About me",
     logo: (
       <svg
-      className="mt-0.5"
+        className="mt-0.5"
         stroke="currentColor"
         fill="currentColor"
         stroke-width="0"
@@ -82,7 +82,7 @@ const navigation = [
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
-}
+} 
 
 export default function Navbar() {
   return (
@@ -91,16 +91,32 @@ export default function Navbar() {
         <div className="relative flex h-16 items-center justify-end">
           <div className="flex  ml items-center border border-zinc-700   sm:ml-1 sm:inset-1  rounded-full">
             <div class="w-3  h-2 rounded-3xl bg-primarytext sm:w-0  sm:h-2"></div>
-            <img
-              width="30"
-              height="30"
-              className="ml-1"
-              src="https://img.icons8.com/ios-glyphs/30/FFFFFF/full-stop--v1.png"
-              alt="full-stop--v1"
-            />
+            <svg
+              height= '17' 
+              width= '17' 
+              id="eFaK2wlWNvV1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 30 30"
+              shape-rendering="geometricPrecision"
+              text-rendering="geometricPrecision"
+              project-id="9dd9cf849c7f4e2d951697394f677d29"
+              export-id="838399e4b64a44a4a55ee0b582c83a79"
+              cached="false"
+              className="text-teal-400 fill-current ml-2.5"
+
+              >
+              <ellipse
+              // className="text-teal-500"
+                rx="10.307692"
+                ry="10.307692"
+                transform="matrix(1.455224 0 0 1.455224 15 15)"
+                // fill="#161718"
+                stroke-width="0"
+              />
+            </svg>
             <a
               href
-              className="text-md py-2 pr-4  pl-1 mx-0  text-primarytext hover:text-teal-500 sm:text-1xl"
+              className="text-md py-2 pr-4  pl-1 mx-0  text-primarytext transition duration-200 hover:text-rose-300 sm:text-1xl"
             >
               __.nalin.__
             </a>
@@ -131,7 +147,7 @@ export default function Navbar() {
                     className={classNames(
                       item.current
                         ? " text-white"
-                        : "text-gray-300 hover:text-teal-500 ",
+                        : "text-gray-700 hover:text-teal-500 ",
                       "rounded-md  px-3 m-3 text-base font-medium"
                     )}
                   >
@@ -158,7 +174,7 @@ export default function Navbar() {
               className={classNames(
                 item.current
                   ? "bg-gray-900 text-white"
-                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                  : "text-gray-700 hover:bg-gray-700 hover:text-white",
                 "block rounded-md px-3 py-2 text-base font-medium"
               )}
             >

@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
-// import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 function Herotxt() {
   const web = useRef(null);
   const full = useRef(null);
+  const icon = useRef(null);
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -37,16 +37,34 @@ function Herotxt() {
       },
       "-=0.5"
     );
+    tl.fromTo(
+      icon.current,
+      {
+        opacity: 0,
+        y: 25,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.inOut",
+      },
+      "-=0.5"
+    );
   }, []);
   return (
-    <div className="flex sm:w-full sm:h-80 items-center justify-center">
+    <>
+    {/* <img className="h-52" src="./moon.png" alt="" /> */}
+    <div className="flex sm:w-full flex-col sm:h-80 items-center justify-center">
+      <img ref={icon} alt="hero"  width="100" height="100"  className=" rounded-full w-15   " src="/avatar.png" ></img>
       <h1 className="text-4xl mt-10  font-semibold text-accentv md:text-6xl lg:text-7xl ">
-        <span ref={web} className="text-cyan-100	">
+        <span ref={web} className="text-cyan-300	">
         Front-End Flair,
         </span>
-        <span ref={full} className="text-rose-100 ">  Full Stack Power</span>
+        <span ref={full} className="text-rose-300 ">  Full Stack Power </span>
       </h1>
     </div>
+    </>
   );
 }
 export default Herotxt;
