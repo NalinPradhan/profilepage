@@ -4,12 +4,11 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faFileCode } from '@fortawesome/free-solid-svg-icons';
+
 
 const navigation = [
   {
-    name: "Home",
+    name: "LinkedIn",
     logo: (
       <svg
         fill="#FFFFFF"
@@ -40,7 +39,7 @@ const navigation = [
     current: false,
   },
   {
-    name: "My Projects",
+    name: "X",
     logo: (
       <svg
         stroke="currentColor"
@@ -58,7 +57,7 @@ const navigation = [
     current: false,
   },
   {
-    name: "About me",
+    name: "Instagram",
     logo: (
       <svg
         className="mt-0.5"
