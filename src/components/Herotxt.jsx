@@ -10,8 +10,17 @@ function Herotxt() {
   const icon = useRef(null);
 
   const greet = () => {
+    const existingTextBox = icon.current.querySelector('div');
+    if(existingTextBox){
+      existingTextBox.remove();
+    }
     const textbox = document.createElement('div');
-    
+    const par = document.createElement('p');
+
+    par.innerHTML= "Hey, wasup!";
+    textbox.appendChild(par);
+    textbox.style.position= "absolute";  
+    icon.current.appendChild(textbox);
     
     
   };
@@ -63,7 +72,10 @@ function Herotxt() {
     <>
     {/* <img className="h-52" src="./moon.png" alt="" /> */}
     <div className="flex sm:w-full flex-col sm:h-80 items-center justify-center">
-      <img ref={icon} onMouseOver={greet} alt="hero"  width="100" height="100"  className=" rounded-full w-15   " src="/avatar.png" ></img>
+      <div ref={icon}>
+
+      <img  style={{position: "relative"}} onMouseOver={greet} alt="hero"  width="100" height="100"  className=" rounded-full w-15   " src="/avatar.png" ></img>
+      </div>
 
       <h1 className="text-4xl mt-10  font-semibold text-accentv md:text-6xl lg:text-7xl ">
         <span ref={web} className="text-cyan-300	">
