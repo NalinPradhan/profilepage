@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
+// import bubble from "../../public/thinkbox.svg";
 
 gsap.registerPlugin(useGSAP);
 function Herotxt() {
@@ -9,21 +9,7 @@ function Herotxt() {
   const full = useRef(null);
   const icon = useRef(null);
 
-  const greet = () => {
-    const existingTextBox = icon.current.querySelector('div');
-    if(existingTextBox){
-      existingTextBox.remove();
-    }
-    const textbox = document.createElement('div');
-    const par = document.createElement('p');
-
-    par.innerHTML= "Hey, wasup!";
-    textbox.appendChild(par);
-    textbox.style.position= "absolute";  
-    icon.current.appendChild(textbox);
-    
-    
-  };
+  
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.fromTo(
@@ -74,7 +60,7 @@ function Herotxt() {
     <div className="flex sm:w-full flex-col sm:h-80 items-center justify-center">
       <div ref={icon}>
 
-      <img  style={{position: "relative"}} onMouseOver={greet} alt="hero"  width="100" height="100"  className=" rounded-full w-15   " src="/avatar.png" ></img>
+      <img  style={{position: "relative"}}  alt="hero"  width="100" height="100"  className=" rounded-full w-15   " src="/avatar.png" ></img>
       </div>
 
       <h1 className="text-4xl mt-10  font-semibold text-accentv md:text-6xl lg:text-7xl ">
