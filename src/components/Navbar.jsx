@@ -85,7 +85,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="border border-zinc-700 py-1">
+    <Disclosure as="nav" className="border  border-zinc-700 py-1">
       <div className="mx-auto max-w-7xl px-2 sm:ml-2 sm:px-6 lg:px-0">
         <div className="relative flex h-16 items-center justify-end">
           <div className="flex  ml items-center border border-zinc-700   sm:ml-1 sm:inset-1  rounded-full">
@@ -120,7 +120,7 @@ export default function Navbar() {
               __.nalin.__
             </a>
           </div>
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div className="absolute inset-y-0 right-0  flex left- justify-end sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative text-base inline-flex items-center justify-center rounded-md p-2 focus:ring-inset ">
               <span className="absolute -inset-0.5" />
