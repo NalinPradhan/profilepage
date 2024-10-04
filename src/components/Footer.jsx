@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='bg-teal-300'>
             <div className="h-32 ">
                 {/* <a href="resume" className="resume">Resume</a> */}
                 <div className="container mx-auto flex justify-between items-center">

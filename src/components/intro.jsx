@@ -42,15 +42,15 @@ function Intro() {
   return (
     <>
 <div id="here" className="m-10 p-5 grid grid-cols-1  lg:grid-cols-3 gap-4">
-  <div className="border grid rounded-lg border-zinc-700 m-3 shadow-lg h-80 items-center p-4 text-slate-600 justify-center">
-    <div className="text-xl text-slate-700 flex justify-center font-semibold">About Me</div>
+  <div className="border grid rounded-lg border-zinc-700 m-3 shadow-lg h-80  p-4 text-slate-600 justify-center">
+    <div className="text-xl text-slate-700 flex sm:justify-center font-semibold">About Me</div>
     <p className="leading-relaxed overflow-hidden text-ellipsis">
       Hi, I'm Nalin, a passionate front-end developer specializing in building responsive, user-friendly, and visually appealing web applications. With expertise in the MERN stack (MongoDB, Express, React, Node.js), I create seamless digital experiences by transforming complex ideas into engaging web interfaces.
     </p>
   </div>
 
   <div className="border grid rounded-lg border-zinc-700 py-1 m-3 shadow-lg h-80 items-center p-4 text-slate-600 justify-center">
-    <div className="text-xl text-slate-700 flex justify-center font-semibold">Skills</div>
+    <div className="text-xl text-slate-700 flex sm:justify-center h-11 font-semibold">Skills</div>
     <p className="leading-relaxed overflow-hidden text-ellipsis">
       <ul className="list-disc pl-3">
         <li>Front-End Technologies: HTML5, CSS3, JavaScript (ES6+), React.js</li>
@@ -65,7 +65,7 @@ function Intro() {
   </div>
 
   <div className="border flex flex-col rounded-lg border-zinc-700 py-1 shadow-lg m-3 items-center p-4 text-slate-600">
-    <div className="text-xl text-slate-700 flex justify-center font-semibold">Contact Me</div>
+    <div className="text-xl text-slate-700 flex sm:justify-center font-semibold">Contact Me</div>
     <p className="leading-relaxed  overflow-hidden text-ellipsis mb-2">
       I’m always looking to collaborate on exciting projects or to tackle new challenges in web development. Feel free to reach out through 
       <a className="text-blue-500 hover:underline decoration-2 underline-offset-3 hover:text-cyan-500" href="#here"> pnalin63@gmail.com</a>.
