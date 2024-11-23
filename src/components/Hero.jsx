@@ -40,7 +40,7 @@ const HeroComponent = forwardRef((props, ref) => {
     const translateTl = gsap.timeline({ delay: 2.5});
     translateTl.to(textRef.current, {
       opacity: 1,
-      y: "-450",
+      y: "-500",
       ease: "power3.inOut",
       duration: 1,
     });
