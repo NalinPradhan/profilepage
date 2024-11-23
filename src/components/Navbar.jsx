@@ -26,8 +26,8 @@ export default function Navbar() {
   return (
     <Disclosure as="nav" className="border border-zinc-700 py-1">
       <div className="px-2 sm:ml-2 sm:px-6 lg:px-0">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="flex ml items-center border border-zinc-700 sm:ml-1 sm:inset-1 rounded-full">
+        <div className="relative mr-2 flex h-16 items-center justify-between">
+          <div className="flex  items-center border border-zinc-700 sm:ml-1 sm:inset-1 rounded-full">
             <div className="w-3 h-2 rounded-3xl bg-primarytext sm:w-0 sm:h-2"></div>
             <svg
               height="17"

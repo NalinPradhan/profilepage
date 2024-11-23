@@ -26,7 +26,7 @@ const HeroComponent = forwardRef((props, ref) => {
           opacity: 0,
         },
         {
-          duration: 0.01,
+          duration: 0.1,
           opacity: 1,
           ease: "none",
         }
@@ -37,7 +37,7 @@ const HeroComponent = forwardRef((props, ref) => {
         delay: 0.1,
       });
     });
-    const translateTl = gsap.timeline({ delay: 2.5});
+    const translateTl = gsap.timeline({ delay: 2});
     translateTl.to(textRef.current, {
       opacity: 1,
       y: "-500",
@@ -57,7 +57,7 @@ const Hero = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowComponent(false);
-    }, 3500); // or any other condition to hide the component
+    }, 2500); // or any other condition to hide the component
   }, []);
 
   return (
