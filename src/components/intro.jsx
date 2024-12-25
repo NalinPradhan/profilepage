@@ -45,7 +45,7 @@ function Intro() {
   <div className="border grid rounded-lg border-zinc-700 m-3 shadow-lg h-80  p-4 text-slate-600 justify-center">
     <div className="text-xl text-slate-700 flex sm:justify-center font-semibold">About Me</div>
     <p className="leading-relaxed overflow-hidden text-ellipsis">
-      Hi, I'm <em className="bg-lime-300"> Nalin </em>, a passionate front-end developer specializing in building responsive, user-friendly, and visually appealing web applications. With expertise in the <em className="bg-pink-200"> MERN stack </em> (MongoDB, Express, React, Node.js), I create seamless digital experiences by transforming complex ideas into engaging web interfaces.
+      Hi, I'm <em className="bg-lime-300"> Nalin </em>. The thing that got me in this was the typical cool tech guys in movies. But then the thing that hooked me in it was the blissful feeling of <em className="bg-pink-200">solving a problem</em>. At first it was finally getting the pyramid of asterisk pattern right, then the problems kept getting complex but that feeling of bliss after solving them never changed. I still think that is the best part of what I do. 
     </p>
   </div>
 
@@ -54,7 +54,7 @@ function Intro() {
     <p className="leading-relaxed overflow-hidden text-ellipsis">
       <ul className="list-disc pl-3">
         <li>Front-End Technologies: HTML5, CSS3, JavaScript (ES6+), React.js</li>
-        <li>Backend Proficiency: Node.js, Express.js</li>
+        <li><em className="bg-pink-200"> MERN stack </em> (MongoDB, Express, React, Node.js)</li>
         <li>Databases: MongoDB, MySQL</li>
         <li>Version Control: Git, GitHub</li>
         <li>Responsive Design: Bootstrap, Material-UI, CSS frameworks</li>
