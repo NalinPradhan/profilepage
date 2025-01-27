@@ -28,22 +28,28 @@ const Footer = () => {
                 <a
                   href="https://github.com/NalinPradhan"
                   className="text-blue-300"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   GitHub
                 </a>
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://in.linkedin.com/in/nalin-pradhan-499738192"
                   className="text-blue-300"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   LinkedIn
                 </a>
               </li>
               <li>
                 <a
-                  href="https://twitter.com/yourprofile"
+                  href="https://www.instagram.com/__.nalin.___/"
                   className="text-blue-300"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Instagram
                 </a>
