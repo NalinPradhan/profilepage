@@ -3,8 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
+      },
       animation: {
         "slow-spin": "spin 4s linear infinite",
+        hover: "float 3s ease-in-out infinite",
       },
       motion: {
         DEFAULT: {
