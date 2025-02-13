@@ -55,7 +55,7 @@ function Herotxt() {
       <div className="flex sm:w-full flex-col sm:h-80 items-center justify-center dark:bg-dark-bg">
         <div
           ref={icon}
-          className="mt-6 motion-enter-active"
+          className="mt-6 motion-enter-active animate-hover"
           onClick={animateIcon}
         >
           <img
