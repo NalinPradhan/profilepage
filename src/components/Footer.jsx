@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black   "  id="footer">
+    <footer className="bg-black   " id="footer">
       <div className="lg:h-96 md:h-80  gap-7 flex justify-center items-center">
         <div className="container mx-auto flex-col justify-between items-center ml-56 mr-56">
           <div className="m-12 ">
@@ -16,7 +16,9 @@ const Footer = () => {
                 </p>
               </li>
               <li>
-                <p className="text-blue-300">Phone: (975) 77300501 <br></br> (91) 7908618599</p>
+                <p className="text-blue-300">
+                  Phone: (975) 77300501 <br></br> (91) 7908618599
+                </p>
               </li>
             </ul>
           </div>
@@ -57,11 +59,22 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        <div
+          className="bg-yellow-400 animate-slow-spin  dark:text-primarytext-dark text-primarytext-light rounded-full p-2
+             absolute 
+             sm:top-[150%] sm:left-[7%] sm:w-[80px]
+             top-[180%] left-[8%] w-[60px]"
+        >
+          <img
+            src="https://a.storyblok.com/f/171618/x/bde071226b/ornament-type-5-colour-a.svg"
+            alt="decorative element"
+            className="w-full h-auto "
+          />
+        </div>
       </div>
-          <p className="text-blue-300 text-sm justify-center align items-center">
-            &copy; {new Date().getFullYear()} Nalin Pradhan. All rights
-            reserved.
-          </p>
+      <p className="text-blue-300 text-sm justify-center align items-center">
+        &copy; {new Date().getFullYear()} Nalin Pradhan. All rights reserved.
+      </p>
     </footer>
   );
 };
