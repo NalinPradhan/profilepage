@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "./components/Navbar";
 import Herotxt from "./components/Herotxt";
 import Intro from "./components/intro";
+import Works from "./components/Works";
 import Footer from "./components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,8 +23,8 @@ function App() {
       {shownav ? <Navbar /> : null}
       {shownav ? <Herotxt /> : null}
       {shownav ? <Intro /> : null}
+      {shownav ? <Works /> : null}
       {shownav ? <Footer /> : null}
-      
     </>
   );
 }
