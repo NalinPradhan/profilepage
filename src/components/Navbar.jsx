@@ -6,13 +6,13 @@ const navigation = [
     name: "Contact Me",
     logo: (
       <img
-        width="25"
-        height="25"
+        width="17"
+        height="17"
         src="https://img.icons8.com/doodle/48/phone--v1.png"
         alt="phone--v1"
       />
     ),
-    href: "#footer",
+    href: "https://linktr.ee/nalin_pradhan",
     current: false,
   },
 ];
@@ -67,23 +67,24 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="border absolute border-zinc-700 rounded-full sm:justify-end right-0">
+          <div className="sm:justify-end right-0">
             <div className="flex space-x-4">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
                   aria-current={item.current ? "page" : undefined}
-                  className={classNames(
-                    item.current
-                      ? "text-white"
-                      : "text-gray-700 hover:text-teal-500",
-                    "rounded-md px-3 m-3 text-base font-medium"
-                  )}
+                  className="flex items-center border border-zinc-700 rounded-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  <div className="flex gap-2 group transition duration-200 hover:text-teal-500">
-                    {item.logo}
-                    {item.name}
+                  <div className="flex items-center gap-2 px-3 py-2">
+                    <span className="ml-2.5 fill-current text-yellow-400">
+                      {item.logo}
+                    </span>
+                    <div className="text-md pr-4 pl-1 text-primarytext-light dark:text-primarytext-dark transition duration-200 hover:text-teal-500 sm:text-1xl">
+                      {item.name}
+                    </div>
                   </div>
                 </a>
               ))}
