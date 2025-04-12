@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply text-primarytext-light dark:text-primarytext-dark transition-colors duration-200;
+    @apply bg-light-bg dark:bg-dark-bg text-primarytext-light dark:text-primarytext-dark transition-colors duration-300 ease-in-out;
   }
 
   h1,
@@ -14,29 +15,69 @@
   h4,
   h5,
   h6 {
-    @apply dark:text-primarytext-dark transition-colors duration-200;
+    @apply font-display tracking-tight dark:text-primarytext-dark transition-colors duration-300 ease-in-out;
   }
 
   p {
-    @apply dark:text-primarytext-dark transition-colors duration-200;
+    @apply leading-relaxed dark:text-primarytext-dark transition-colors duration-300 ease-in-out;
   }
 
   a {
-    @apply dark:text-primarytext-dark transition-colors duration-200;
+    @apply dark:text-primarytext-dark transition-all duration-300 ease-in-out;
+  }
+
+  /* Custom selection color */
+  ::selection {
+    @apply bg-accent-cyan-light/30 dark:bg-accent-cyan-dark/30 text-primarytext-light dark:text-primarytext-dark;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-light-card dark:bg-dark-card border border-zinc-200 dark:border-zinc-800 rounded-xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan to-accent-cyan-dark animate-shimmer bg-[length:200%_auto];
+  }
+
+  .section-heading {
+    @apply text-2xl sm:text-3xl font-bold mb-6 gradient-text;
+  }
+
+  .button {
+    @apply px-4 py-2 rounded-full transition-all duration-300 ease-in-out font-medium;
+  }
+
+  .button-primary {
+    @apply button bg-accent-cyan hover:bg-accent-cyan-dark text-white;
+  }
+
+  .button-secondary {
+    @apply button bg-light-accent dark:bg-dark-accent hover:bg-zinc-200 dark:hover:bg-zinc-700;
   }
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 :root {
   --transition-duration: 0.3s;
+  --background-light: #f8f9fa;
+  --background-dark: #121212;
+  --text-light: #1a1a1a;
+  --text-dark: #f1f3f5;
+  --accent-cyan: #33d6ff;
+  --accent-rose: #ff66aa;
+  --accent-yellow: #ffd24d;
 }
+
 body {
   margin: 0;
   /* position: fixed; */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smooting: grayscale;
+  -moz-osx-font-smoothing: grayscale;
   /* background-color: rgb(14, 16, 15); */
   font-family: "Hanken Grotesk", sans-serif;
   font-optical-sizing: auto;
@@ -59,20 +100,30 @@ body {
   font-weight: 800;
   font-style: normal;
 }
+
+.space-grotesk-font {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .no-inherit {
   all: unset !important;
 }
+
 .word {
   position: absolute;
   right: 50%;
   top: 50%;
   transform: translate(50%, -50%);
-  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 42px;
 }
+
 .typo {
   font-family: "Hanken Grotesk", sans-serif !important;
   font-optical-sizing: auto;
@@ -86,13 +137,16 @@ body {
   width: 100%;
   height: 100%;
 }
+
 .adwid {
   height: 150px;
 }
+
 .position {
   position: relative;
   height: 100vh;
 }
+
 .nav {
   justify-content: center !important;
 }
@@ -122,4 +176,61 @@ body {
 .dark body {
   background-color: #1a1a1a;
   color: #ffffff;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient borders */
+.gradient-border {
+  position: relative;
+  border-radius: 0.75rem;
+  padding: 1px;
+  background: linear-gradient(to right, var(--accent-cyan), var(--accent-rose));
+}
+
+.gradient-border-content {
+  border-radius: 0.75rem;
+  background: var(--background-light);
+  height: 100%;
+}
+
+.dark .gradient-border-content {
+  background: var(--background-dark);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.6);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(200, 200, 200, 0.4);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 200, 200, 0.6);
 }
