@@ -23,13 +23,14 @@ function Works() {
 
   return (
     <>
-      <div className="m-10 p-5 relative z-0">
+      <div className="m-10 p-5 relative z-0 border-t dark:border-hidden">
         <h2 className="section-heading text-center mb-10">My Works</h2>
 
         <div className="space-y-16">
-          {/* First Project - Birdie */}
+          {/* Combined Projects Card */}
           <div className="card overflow-hidden p-0">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            {/* First Project - Birdie */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-zinc-200 dark:border-zinc-800">
               {/* Project Description */}
               <div className="p-8 space-y-5">
                 <h3 className="text-xl font-semibold text-slate-700 dark:text-primarytext-dark">
@@ -39,9 +40,11 @@ function Works() {
                   A modern mobile application designed to connect users with
                   professional movers and maids. Built with a focus on user
                   experience and clean design,{" "}
-                  <span className="bg-gradient-to-r from-accent-yellow to-accent-yellow-light bg-clip-text text-transparent font-medium">
-                    Birdie makes finding and booking service providers
-                    effortless.
+                  <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
+                    <em>
+                      Birdie makes finding and booking service providers
+                      effortless.
+                    </em>
                   </span>
                 </p>
                 <div className="space-y-2">
@@ -69,36 +72,32 @@ function Works() {
               </div>
 
               {/* Project Image */}
-              <div className="flex justify-center items-center bg-gradient-to-br from-accent-yellow-light/10 to-accent-cyan/10 dark:from-accent-yellow-dark/5 dark:to-accent-cyan-dark/5 p-8">
+              <div className="flex justify-center items-center p-8">
                 <div
-                  className="w-1/2 animate-hover cursor-pointer relative group"
+                  className="w-1/2 animate-hover cursor-pointer relative"
                   onClick={() => openModal("/birdie-mockup.png")}
                 >
-                  <div className="absolute -inset-1 bg-gradient-to-r from-accent-cyan to-accent-rose rounded-lg blur opacity-25 group-hover:opacity-60 transition duration-300"></div>
                   <img
                     src="/birdie-mockup.png"
                     alt="Birdie App Mockup"
-                    className="rounded-lg w-full object-contain relative z-10"
+                    className="rounded-lg w-full object-contain relative"
                   />
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Second Project - Prod by Nalin */}
-          <div className="card overflow-hidden p-0">
+            {/* Second Project - Prod by Nalin */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Project Image (Left side) */}
-              <div className="flex justify-center items-center order-2 lg:order-1 bg-gradient-to-br from-accent-rose-light/10 to-accent-cyan/10 dark:from-accent-rose-dark/5 dark:to-accent-cyan-dark/5 p-8">
+              <div className="flex justify-center items-center order-2 lg:order-1 p-8">
                 <div
-                  className="w-3/4 animate-hover cursor-pointer relative group"
+                  className="w-3/4 animate-hover cursor-pointer relative"
                   onClick={() => openModal("/prodbynalinmovkup.png")}
                 >
-                  <div className="absolute -inset-1 bg-gradient-to-r from-accent-rose to-accent-cyan rounded-lg blur opacity-25 group-hover:opacity-60 transition duration-300"></div>
                   <img
                     src="/bigger.png"
                     alt="Prod by Nalin Portfolio"
-                    className="rounded-lg w-full object-contain relative z-10"
+                    className="rounded-lg w-full object-contain relative"
                   />
                 </div>
               </div>

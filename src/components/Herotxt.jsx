@@ -52,21 +52,19 @@ function Herotxt() {
 
   return (
     <>
-      <div className="flex sm:w-full flex-col sm:h-80 items-center justify-center bg-light-bg dark:bg-dark-bg relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-radial from-accent-cyan-light/10 via-transparent to-transparent dark:from-accent-cyan-dark/5 dark:via-transparent dark:to-transparent"></div>
-
+      <div className="flex sm:w-full flex-col dark:border-hidden da border sm:h-80 items-center justify-center bg-light-card/80 dark:bg-dark-card/80 relative overflow-hidden">
         <div
           ref={icon}
           className="mt-6 motion-enter-active animate-hover relative z-10"
           onClick={animateIcon}
         >
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-accent-cyan to-accent-rose rounded-full blur opacity-75 animate-pulse-slow"></div>
+          <div className="absolute -inset-0.5 bg-gradient-to-r  rounded-full blur opacity-75 animate-pulse-slow"></div>
           <img
             style={{ position: "relative" }}
             alt="hero"
             width="100"
             height="100"
-            className="rounded-full w-15 border-2 border-white dark:border-gray-800 object-cover z-10 relative"
+            className="rounded-full w-15   object-cover z-10 relative"
             src="/avatar.png"
           />
         </div>

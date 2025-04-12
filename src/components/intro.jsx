@@ -39,14 +39,34 @@ function Intro() {
       "-=0.5"
     );
   }, []);
+
   return (
     <>
-      <div id="here" className="m-10 p-5 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div
+        id="here"
+        className="m-10 p-5  grid grid-cols-1 lg:grid-cols-3 gap-6"
+      >
         <div className="card overflow-hidden h-auto lg:h-80 p-6 flex flex-col">
           <div className="section-heading text-xl mb-3">About Me</div>
           <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
             Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-accent-yellow to-accent-yellow-light bg-clip-text text-transparent font-medium">
+            <span className="bg-yellow-400  bg-clip-text text-transparent font-medium relative">
+              {/* Hand-drawn umbrella-like line */}
+              <svg
+                className="absolute w-full top-0 left-0 transform -translate-y-2"
+                height="16"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0,10 C15,0 35,0 50,10 C65,20 85,0 100,10"
+                  stroke="#F9CB28"
+                  strokeWidth="4"
+                  fill="none"
+                  strokeLinecap="round"
+                  className="animate-pulse-slow"
+                />
+              </svg>
               Nalin
             </span>
             . The thing that got me in this was the typical cool tech guys in
@@ -62,7 +82,7 @@ function Intro() {
           </p>
         </div>
 
-        <div className="card overflow-hidden h-auto lg:h-80 p-6 flex flex-col">
+        <div className="card overflow-hidden h-auto lg:h-80 p-6 flex flex-col relative">
           <div className="section-heading text-xl mb-3">Skills</div>
           <div className="leading-relaxed text-zinc-700 dark:text-zinc-300">
             <ul className="list-disc pl-3 space-y-2">
@@ -72,9 +92,8 @@ function Intro() {
               </li>
               <li>
                 <span className="bg-gradient-to-r from-accent-rose-light to-accent-rose bg-clip-text text-transparent font-medium">
-                  MERN stack
+                  MERN
                 </span>{" "}
-                (MongoDB, Express, React, Node.js)
               </li>
               <li>
                 <span className="font-medium">Databases:</span> MongoDB, MySQL
@@ -123,28 +142,6 @@ function Intro() {
               />
             </div>
           </p>
-          <div className="mt-auto">
-            <a
-              href="#footer"
-              className="button-primary inline-flex items-center space-x-2"
-            >
-              <span>Get in Touch</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </a>
-          </div>
         </div>
       </div>
     </>
