@@ -84,13 +84,13 @@ function Herotxt() {
         <div
           className="bg-yellow-400 animate-slow-spin dark:text-primarytext-dark text-primarytext-light rounded-full p-2
              absolute 
-             sm:top-[27%] sm:left-[7%] sm:w-[80px]
-             top-[21%] left-[6%] w-[60px]"
+             sm:top-[35%] sm:right-[12%] sm:w-[70px]
+             top-[25%] right-[10%] w-[50px]"
         >
           <img
             src="https://a.storyblok.com/f/171618/x/a76779570a/ornament-type-2-colour-f.svg"
             alt="decorative element"
-            className="w-full h-auto "
+            className="w-full h-auto"
           />
         </div>
       </div>
