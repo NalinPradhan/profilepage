@@ -129,7 +129,7 @@ function Intro() {
               pnalin63@gmail.com
             </a>
             .
-            <div
+            {/* <div
               className="bg-yellow-400 animate-slow-spin dark:text-primarytext-dark text-primarytext-light rounded-full p-2
              absolute 
              sm:top-[87%] sm:left-[88%] sm:w-[80px]
@@ -140,7 +140,7 @@ function Intro() {
                 alt="decorative element"
                 className="w-full h-auto"
               />
-            </div>
+            </div> */}
           </p>
         </div>
       </div>
