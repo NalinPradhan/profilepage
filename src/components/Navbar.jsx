@@ -78,6 +78,14 @@ export default function Navbar() {
               __.nalin.__
             </div>
           </div>
+          <div>
+            <img
+              className="h-12 dark:invert"
+              src="/signature.png"
+              alt=""
+              srcset=""
+            />
+          </div>
 
           <div className="flex items-center">
             <div className="flex space-x-4">
