@@ -85,7 +85,7 @@ function Herotxt() {
           </span>
         </h1>
 
-        <div
+        {/* <div
           className="bg-yellow-400 animate-slow-spin dark:text-primarytext-dark text-primarytext-light rounded-full p-2
              absolute 
              sm:top-[35%] sm:right-[12%] sm:w-[70px]
@@ -96,7 +96,7 @@ function Herotxt() {
             alt="decorative element"
             className="w-full h-auto"
           />
-        </div>
+        </div> */}
       </div>
     </>
   );

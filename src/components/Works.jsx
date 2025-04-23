@@ -58,6 +58,30 @@ function Works() {
                     <li>Service rating system</li>
                   </ul>
                 </div>
+                <div className="pt-3 pb-2">
+                  <a
+                    className="button-primary inline-flex items-center space-x-2"
+                    href="https://www.figma.com/proto/y4fAGYuBpbOfxeuGY6emAk/Birdie?page-id=81%3A807&node-id=81-808&p=f&viewport=993%2C-1113%2C1.43&t=4j5vpuwI2TI910y5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=81%3A808"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span>View Prototype in Figma</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+                </div>
                 <div className="pt-4 flex flex-wrap gap-2">
                   <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-yellow-light/20 to-accent-yellow/30 text-accent-yellow-dark dark:text-accent-yellow-light">
                     Figma
