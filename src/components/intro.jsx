@@ -44,7 +44,7 @@ function Intro() {
     <>
       <div
         id="here"
-        className="m-10 p-5  grid grid-cols-1 lg:grid-cols-3 gap-6"
+        className="m-4 sm:m-20 p-5  grid grid-cols-1 lg:grid-cols-3 gap-6"
       >
         <div className="card overflow-hidden h-auto lg:h-80 p-6 flex flex-col">
           <div className="section-heading text-xl mb-3">About Me</div>
