@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const navigation = [
   {
-    name: "Reach out",
+    name: "Say Hi!",
     logo: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -96,15 +96,13 @@ export default function Navbar() {
                   target="_blank"
                   rel="noreferrer"
                   aria-current={item.current ? "page" : undefined}
-                  className="flex items-center bg-gradient-to-br from-accent-cyan-light/10 to-accent-rose-light/10 dark:from-accent-cyan-dark/10 dark:to-accent-rose-dark/10 border border-zinc-200 dark:border-zinc-700 rounded-full cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300"
+                  className="flex items-center bg-gradient-to-br from-accent-cyan-light/10 to-accent-rose-light/10 dark:from-accent-cyan-dark/10 dark:to-accent-rose-dark/10 border border-zinc-200 dark:border-zinc-700 rounded-full cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300 px-2 py-1 sm:px-3 sm:py-1"
                 >
-                  <div className="flex items-center gap-1 px-1 py-1 sm:gap-2 sm:px-4 sm:py-2">
-                    <span className="text-accent-cyan dark:text-accent-cyan-light">
-                      {item.logo}
-                    </span>
-                    <div className="text-sm sm:text-md font-medium text-primarytext-light dark:text-primarytext-dark transition duration-200 hover:text-accent-cyan dark:hover:text-accent-cyan-light">
-                      {item.name}
-                    </div>
+                  <span className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center text-accent-cyan dark:text-accent-cyan-light">
+                    {item.logo}
+                  </span>
+                  <div className="text-sm sm:text-md font-medium text-primarytext-light dark:text-primarytext-dark transition duration-200 hover:text-accent-cyan dark:hover:text-accent-cyan-light pl-1 pr-2 whitespace-nowrap">
+                    {item.name}
                   </div>
                 </a>
               ))}
