@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const navigation = [
   {
-    name: "Contact Me",
+    name: "Reach out",
     logo: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ export default function Navbar() {
                   aria-current={item.current ? "page" : undefined}
                   className="flex items-center bg-gradient-to-br from-accent-cyan-light/10 to-accent-rose-light/10 dark:from-accent-cyan-dark/10 dark:to-accent-rose-dark/10 border border-zinc-200 dark:border-zinc-700 rounded-full cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300"
                 >
-                  <div className="flex items-center gap-1 px-2 py-1 sm:gap-2 sm:px-4 sm:py-2">
+                  <div className="flex items-center gap-1 px-1 py-1 sm:gap-2 sm:px-4 sm:py-2">
                     <span className="text-accent-cyan dark:text-accent-cyan-light">
                       {item.logo}
                     </span>
