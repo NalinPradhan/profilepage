@@ -23,7 +23,7 @@ function Works() {
 
   return (
     <>
-      <div className="m-10 p-5 relative z-0 border-t dark:border-hidden">
+      <div className="m-4 sm:m-20 p-5 relative z-0 border-t dark:border-hidden">
         <h2 className="section-heading text-center mb-10">My Works</h2>
 
         <div className="space-y-16">
