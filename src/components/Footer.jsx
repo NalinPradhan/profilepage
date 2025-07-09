@@ -181,7 +181,7 @@ const Footer = () => {
       </div>
 
       <div className="relative w-full pb-12 pt-6">
-        <div
+        {/* <div
           className="bg-yellow-400 animate-slow-spin dark:text-primarytext-dark text-primarytext-light rounded-full p-2
             absolute right-[8%] -top-16
             w-[90px] z-0 shadow-lg"
@@ -191,7 +191,7 @@ const Footer = () => {
             alt="decorative element"
             className="w-full h-auto"
           />
-        </div>
+        </div> */}
         <div className="flex flex-col items-center">
           <div className="w-16 h-1 bg-gradient-to-r from-accent-cyan to-accent-rose rounded-full mb-4"></div>
           <p className="text-blue-600 dark:text-blue-400 text-sm text-center">
