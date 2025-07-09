@@ -23,17 +23,107 @@ function Works() {
 
   return (
     <>
-      <div className="m-4 sm:m-20 p-5 relative z-0 border-t dark:border-hidden">
+      <div
+        id="works"
+        className="m-4 sm:m-20 p-5 relative z-0 border-t dark:border-hidden leading-snug "
+      >
         <h2 className="section-heading text-center mb-10">My Works</h2>
 
         <div className="space-y-16">
           {/* Combined Projects Card */}
           <div className="card overflow-hidden p-0">
-            {/* First Project - Birdie */}
+            {/* First Project - Bhutan Incense */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-zinc-200 dark:border-zinc-800">
               {/* Project Description */}
               <div className="p-8 space-y-5">
-                <h3 className="text-xl font-semibold text-slate-700 dark:text-primarytext-dark">
+                <h3 className="text-2xl font-semibold text-slate-700 dark:text-primarytext-dark">
+                  Bhutan Incense
+                </h3>
+                <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                  A product showcase for Bhutan Incense. The company creates{" "}
+                  <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
+                    <em>handcrafted incense </em>
+                  </span>
+                  using traditional Bhutanese methods.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="font-medium text-slate-700 dark:text-primarytext-dark">
+                    Key Features:
+                  </h4>
+                  <ul className="list-disc ml-5 text-zinc-600 dark:text-zinc-300 space-y-1">
+                    <li>Sleek Modern Design</li>
+                    <li>Smooth Animations </li>
+                  </ul>
+                </div>
+                <div className="pt-3 pb-2">
+                  <a
+                    className="button-primary inline-flex items-center space-x-2"
+                    href="https://www.figma.com/proto/e0FShubHzZjWdgBhtVDpAm/Untitled?page-id=0%3A1&node-id=47-92&m=draw&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=47%3A92&t=3zdgTGtK5JUrhFpe-1"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span>View prototype </span>
+                    <img
+                      width="18"
+                      height="18"
+                      src="https://img.icons8.com/ios-filled/50/figma--v1.png"
+                      alt="figma--v1"
+                    />
+                  </a>
+                </div>
+                <div className="pt-4 flex flex-wrap gap-2">
+                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-yellow-light/20 to-accent-yellow/30 text-accent-yellow-dark dark:text-accent-yellow-light">
+                    Figma
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-cyan-light/20 to-accent-cyan/30 text-accent-cyan-dark dark:text-accent-cyan-light">
+                    UI/UX
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-rose-light/20 to-accent-rose/30 text-accent-rose-dark dark:text-accent-rose-light">
+                    GSAP Animations
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-yellow-light/20 to-accent-yellow/30 text-accent-rose-dark dark:text-accent-rose-light">
+                    Product Showcase
+                  </span>
+                </div>
+              </div>
+              {/* Project Video */}
+              <div className="flex justify-center items-center p-8">
+                <div
+                  className=" animate-hover cursor-pointer relative"
+                  onClick={() =>
+                    openModal(
+                      "https://res.cloudinary.com/dlyxpzd0s/video/upload/v1752055585/rr2_wbgaet.mp4"
+                    )
+                  }
+                >
+                  <video
+                    src="https://res.cloudinary.com/dlyxpzd0s/video/upload/v1752055585/rr2_wbgaet.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    className="rounded-lg w-4/5 object-contain relative"
+                  ></video>
+                </div>
+              </div>
+            </div>
+
+            {/* Second Project - Birdie */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-zinc-200 dark:border-zinc-800">
+              {/* Project Description */}
+              <div className="flex justify-center items-center p-8">
+                <div
+                  className="w-1/2 animate-hover cursor-pointer relative"
+                  onClick={() => openModal("/birdie-mockup.png")}
+                >
+                  <img
+                    src="/birdie-mockup.png"
+                    alt="Birdie App Mockup"
+                    className="rounded-lg w-full object-contain relative"
+                  />
+                </div>
+              </div>
+              <div className="p-8 space-y-5">
+                <h3 className="text-2xl font-semibold text-slate-700 dark:text-primarytext-dark">
                   Birdie - Service Provider App
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
@@ -65,7 +155,7 @@ function Works() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span>View in Figma </span>
+                    <span>View prototype </span>
                     <img
                       width="18"
                       height="18"
@@ -86,41 +176,14 @@ function Works() {
                   </span>
                 </div>
               </div>
-
               {/* Project Image */}
-              <div className="flex justify-center items-center p-8">
-                <div
-                  className="w-1/2 animate-hover cursor-pointer relative"
-                  onClick={() => openModal("/birdie-mockup.png")}
-                >
-                  <img
-                    src="/birdie-mockup.png"
-                    alt="Birdie App Mockup"
-                    className="rounded-lg w-full object-contain relative"
-                  />
-                </div>
-              </div>
             </div>
 
-            {/* Second Project - Prod by Nalin */}
+            {/* Third Project - Prod by Nalin */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-              {/* Project Image (Left side) */}
-              <div className="flex justify-center items-center order-2 lg:order-1 p-8">
-                <div
-                  className="w-3/4 animate-hover cursor-pointer relative"
-                  onClick={() => openModal("/prodbynalinmovkup.png")}
-                >
-                  <img
-                    src="/bigger.png"
-                    alt="Prod by Nalin Portfolio"
-                    className="rounded-lg w-full object-contain relative"
-                  />
-                </div>
-              </div>
-
-              {/* Project Description (Right side) */}
-              <div className="p-8 space-y-5 order-1 lg:order-2">
-                <h3 className="text-xl font-semibold text-slate-700 dark:text-primarytext-dark">
+              {/* Project Description (Left on mobile, left on desktop) */}
+              <div className="p-8 space-y-5 order-1 lg:order-1">
+                <h3 className="text-2xl font-semibold text-slate-700 dark:text-primarytext-dark">
                   prodbynalin
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
@@ -191,6 +254,19 @@ function Works() {
                   </span>
                 </div>
               </div>
+              {/* Project Image (Right on desktop) */}
+              <div className="flex justify-center items-center order-2 lg:order-2 p-8">
+                <div
+                  className="w-9/10 animate-hover cursor-pointer relative"
+                  onClick={() => openModal("/prodbynalinmovkup.png")}
+                >
+                  <img
+                    src="/bigger.png"
+                    alt="Prod by Nalin Portfolio"
+                    className="rounded-lg w-full object-contain relative"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -205,15 +281,25 @@ function Works() {
           />
           <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
             <div
-              className="w-[500px] p-4 relative pointer-events-auto"
+              className="w-[90vw] max-w-[700px] p-4 relative pointer-events-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-accent-cyan to-accent-rose rounded-lg blur opacity-30"></div>
-              <img
-                src={selectedImage}
-                alt="Project Mockup"
-                className="w-full object-contain rounded-lg relative z-10"
-              />
+              {selectedImage.endsWith(".mp4") ? (
+                <video
+                  src={selectedImage}
+                  controls
+                  autoPlay
+                  loop
+                  className="w-full max-h-[80vh] object-contain rounded-lg relative z-10"
+                />
+              ) : (
+                <img
+                  src={selectedImage}
+                  alt="Project Mockup"
+                  className="w-full max-h-[80vh] object-contain rounded-lg relative z-10"
+                />
+              )}
               <button
                 className="absolute top-2 right-2 text-white bg-black/50 hover:bg-black/70 rounded-full p-2 transition-colors duration-300 z-20"
                 onClick={() => setIsModalOpen(false)}

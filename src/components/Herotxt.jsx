@@ -65,7 +65,7 @@ function Herotxt() {
             width="100"
             height="100"
             className="rounded-full w-15   object-cover z-10 relative"
-            src="/avatar.png"
+            src="/secondavatar.png"
           />
         </div>
 
