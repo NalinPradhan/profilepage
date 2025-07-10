@@ -117,12 +117,7 @@ const projects = [
         </span>
       </>
     ),
-    features: [
-      "Intuitive service provider search",
-      "Clean and modern UI design",
-      "User profile management",
-      "Service rating system",
-    ],
+    features: ["Playful UI", "Music Player"],
     tags: ["MERN", "UI/UX Design", "Muisc Player"],
     imageType: "image",
     imageSrc: "/prodbynalinmovkup.png",
