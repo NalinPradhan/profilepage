@@ -1,5 +1,154 @@
 import React, { useState, useEffect } from "react";
 
+const projects = [
+  {
+    title: "Bhutan Incense",
+    description: (
+      <>
+        <span>🫧 </span>A product showcase for Bhutan Incense. The company
+        creates{" "}
+        <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
+          <em>handcrafted incense </em>
+        </span>
+        using traditional Bhutanese methods.
+      </>
+    ),
+    features: ["Modern Design", "Smooth Animations"],
+    tags: ["Figma", "UI/UX", "GSAP Animations", "Product Showcase"],
+    imageType: "video",
+    imageSrc:
+      "https://res.cloudinary.com/dlyxpzd0s/video/upload/v1752055585/rr2_wbgaet.mp4",
+    link: {
+      url: "https://www.figma.com/proto/e0FShubHzZjWdgBhtVDpAm/Untitled?page-id=0%3A1&node-id=47-92&m=draw&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=47%3A92&t=3zdgTGtK5JUrhFpe-1",
+      label: "View prototype",
+      icon: (
+        <img
+          width="18"
+          height="18"
+          src="https://img.icons8.com/ios-filled/50/figma--v1.png"
+          alt="figma--v1"
+        />
+      ),
+    },
+  },
+  {
+    title: "Food Judge",
+    description: (
+      <>
+        <span>🌟 </span>A fun app which uses food prefernces to guess which part
+        of India the player is from.{" "}
+        <span className="bg-gradient-to-r from-accent-yellow to-accent-yellow-light bg-clip-text text-transparent font-medium">
+          <em>Central,Northern, Eastern, Western and Southern </em>
+        </span>
+        regions of India have different food preferences and this app uses that
+        to guess the region.
+      </>
+    ),
+    features: ["Playful Design"],
+    tags: ["Modern UI", "React", "Game"],
+    imageType: "image",
+    imageSrc: "/fd.png",
+    link: {
+      url: "https://food-judge.bytexl.live/",
+      label: "View Live",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+          />
+        </svg>
+      ),
+    },
+  },
+  {
+    title: "Birdie - Service Provider App",
+    description: (
+      <>
+        <span className="">🫧 </span>A modern mobile application designed to
+        connect users with professional movers and maids. Built with a focus on
+        user experience and clean design,{" "}
+        <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
+          <em>
+            Birdie makes finding and booking service providers effortless.
+          </em>
+        </span>
+      </>
+    ),
+    features: [
+      "Intuitive service provider search",
+      "Clean and modern UI design",
+      "User profile management",
+      "Service rating system",
+    ],
+    tags: ["Figma", "UI/UX Design", "Hi-Fi Prototype"],
+    imageType: "image",
+    imageSrc: "/birdie-mockup.png",
+    link: {
+      url: "https://www.figma.com/proto/y4fAGYuBpbOfxeuGY6emAk/Birdie?page-id=81%3A807&node-id=81-808&p=f&viewport=993%2C-1113%2C1.43&t=4j5vpuwI2TI910y5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=81%3A808",
+      label: "View prototype",
+      icon: (
+        <img
+          width="18"
+          height="18"
+          src="https://img.icons8.com/ios-filled/50/figma--v1.png"
+          alt="figma--v1"
+        />
+      ),
+    },
+  },
+  {
+    title: "prodbynalin",
+    description: (
+      <>
+        <span className="text-sm">🎙️</span>A personal project which I built to
+        post the beats I make. The UI is inspired by one of my favourite cartoon
+        character{" "}
+        <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
+          <em>Stitch. </em>
+        </span>
+      </>
+    ),
+    features: [
+      "Intuitive service provider search",
+      "Clean and modern UI design",
+      "User profile management",
+      "Service rating system",
+    ],
+    tags: ["MERN", "UI/UX Design", "Muisc Player"],
+    imageType: "image",
+    imageSrc: "/prodbynalinmovkup.png",
+    link: {
+      url: "https://prodbynalin.netlify.app/",
+      label: "View Live",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+          />
+        </svg>
+      ),
+    },
+  },
+];
+
 function Works() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -28,250 +177,89 @@ function Works() {
         className="m-4 sm:m-20 p-5 relative z-0 border-t dark:border-hidden leading-snug "
       >
         <h2 className="section-heading text-center mb-10">My Works</h2>
-
         <div className="space-y-16">
-          {/* Combined Projects Card */}
           <div className="card overflow-hidden p-0">
-            {/* First Project - Bhutan Incense */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-zinc-200 dark:border-zinc-800">
-              {/* Project Description */}
-              <div className="p-8 space-y-5">
-                <h3 className="text-2xl font-semibold text-slate-700 dark:text-primarytext-dark">
-                  Bhutan Incense
-                </h3>
-                <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                  A product showcase for Bhutan Incense. The company creates{" "}
-                  <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
-                    <em>handcrafted incense </em>
-                  </span>
-                  using traditional Bhutanese methods.
-                </p>
-                <div className="space-y-2">
-                  <h4 className="font-medium text-slate-700 dark:text-primarytext-dark">
-                    Key Features:
-                  </h4>
-                  <ul className="list-disc ml-5 text-zinc-600 dark:text-zinc-300 space-y-1">
-                    <li>Sleek Modern Design</li>
-                    <li>Smooth Animations </li>
-                  </ul>
-                </div>
-                <div className="pt-3 pb-2">
-                  <a
-                    className="button-primary inline-flex items-center space-x-2"
-                    href="https://www.figma.com/proto/e0FShubHzZjWdgBhtVDpAm/Untitled?page-id=0%3A1&node-id=47-92&m=draw&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=47%3A92&t=3zdgTGtK5JUrhFpe-1"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span>View prototype </span>
-                    <img
-                      width="18"
-                      height="18"
-                      src="https://img.icons8.com/ios-filled/50/figma--v1.png"
-                      alt="figma--v1"
-                    />
-                  </a>
-                </div>
-                <div className="pt-4 flex flex-wrap gap-2">
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-yellow-light/20 to-accent-yellow/30 text-accent-yellow-dark dark:text-accent-yellow-light">
-                    Figma
-                  </span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-cyan-light/20 to-accent-cyan/30 text-accent-cyan-dark dark:text-accent-cyan-light">
-                    UI/UX
-                  </span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-rose-light/20 to-accent-rose/30 text-accent-rose-dark dark:text-accent-rose-light">
-                    GSAP Animations
-                  </span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-yellow-light/20 to-accent-yellow/30 text-accent-rose-dark dark:text-accent-rose-light">
-                    Product Showcase
-                  </span>
-                </div>
-              </div>
-              {/* Project Video */}
-              <div className="flex justify-center items-center p-8">
+            {projects.map((proj, idx) => (
+              <div
+                key={proj.title}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-zinc-200 dark:border-zinc-800"
+              >
+                {/* Alternate order for image/description */}
                 <div
-                  className=" animate-hover cursor-pointer relative"
-                  onClick={() =>
-                    openModal(
-                      "https://res.cloudinary.com/dlyxpzd0s/video/upload/v1752055585/rr2_wbgaet.mp4"
-                    )
-                  }
+                  className={`flex justify-center items-center p-8 ${
+                    idx % 2 === 1 ? "lg:order-2 " : " lg:order-2"
+                  }`}
                 >
-                  <video
-                    src="https://res.cloudinary.com/dlyxpzd0s/video/upload/v1752055585/rr2_wbgaet.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    className="rounded-lg w-4/5 object-contain relative"
-                  ></video>
-                </div>
-              </div>
-            </div>
-
-            {/* Second Project - Birdie */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-zinc-200 dark:border-zinc-800">
-              {/* Project Description */}
-              <div className="flex justify-center items-center p-8">
-                <div
-                  className="w-1/2 animate-hover cursor-pointer relative"
-                  onClick={() => openModal("/birdie-mockup.png")}
-                >
-                  <img
-                    src="/birdie-mockup.png"
-                    alt="Birdie App Mockup"
-                    className="rounded-lg w-full object-contain relative"
-                  />
-                </div>
-              </div>
-              <div className="p-8 space-y-5">
-                <h3 className="text-2xl font-semibold text-slate-700 dark:text-primarytext-dark">
-                  Birdie - Service Provider App
-                </h3>
-                <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                  A modern mobile application designed to connect users with
-                  professional movers and maids. Built with a focus on user
-                  experience and clean design,{" "}
-                  <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
-                    <em>
-                      Birdie makes finding and booking service providers
-                      effortless.
-                    </em>
-                  </span>
-                </p>
-                <div className="space-y-2">
-                  <h4 className="font-medium text-slate-700 dark:text-primarytext-dark">
-                    Key Features:
-                  </h4>
-                  <ul className="list-disc ml-5 text-zinc-600 dark:text-zinc-300 space-y-1">
-                    <li>Intuitive service provider search</li>
-                    <li>Clean and modern UI design</li>
-                    <li>User profile management</li>
-                    <li>Service rating system</li>
-                  </ul>
-                </div>
-                <div className="pt-3 pb-2">
-                  <a
-                    className="button-primary inline-flex items-center space-x-2"
-                    href="https://www.figma.com/proto/y4fAGYuBpbOfxeuGY6emAk/Birdie?page-id=81%3A807&node-id=81-808&p=f&viewport=993%2C-1113%2C1.43&t=4j5vpuwI2TI910y5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=81%3A808"
-                    target="_blank"
-                    rel="noreferrer"
+                  <div
+                    className={`w-4/5 animate-hover cursor-pointer relative`}
+                    onClick={() => openModal(proj.imageSrc)}
                   >
-                    <span>View prototype </span>
-                    <img
-                      width="18"
-                      height="18"
-                      src="https://img.icons8.com/ios-filled/50/figma--v1.png"
-                      alt="figma--v1"
-                    />
-                  </a>
-                </div>
-                <div className="pt-4 flex flex-wrap gap-2">
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-yellow-light/20 to-accent-yellow/30 text-accent-yellow-dark dark:text-accent-yellow-light">
-                    Figma
-                  </span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-cyan-light/20 to-accent-cyan/30 text-accent-cyan-dark dark:text-accent-cyan-light">
-                    UI/UX Design
-                  </span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-rose-light/20 to-accent-rose/30 text-accent-rose-dark dark:text-accent-rose-light">
-                    Hi-Fi Prototype
-                  </span>
-                </div>
-              </div>
-              {/* Project Image */}
-            </div>
-
-            {/* Third Project - Prod by Nalin */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-              {/* Project Description (Left on mobile, left on desktop) */}
-              <div className="p-8 space-y-5 order-1 lg:order-1">
-                <h3 className="text-2xl font-semibold text-slate-700 dark:text-primarytext-dark">
-                  prodbynalin
-                </h3>
-                <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                  A music player built using{" "}
-                  <span className="bg-gradient-to-r from-accent-rose-light to-accent-rose bg-clip-text text-transparent font-medium">
-                    MERN
-                  </span>{" "}
-                  stack and Cloudinary for media file storage plus webhooks. It
-                  is a personal project which I built to post the beats I make.
-                  The UI is inspired by one of my favourite cartoon character{" "}
-                  <span className="bg-gradient-to-r from-accent-yellow to-accent-yellow-light bg-clip-text text-transparent font-medium">
-                    Stitch.
-                  </span>
-                </p>
-                <div className="space-y-2">
-                  <h4 className="font-medium text-slate-700 dark:text-primarytext-dark">
-                    Key Features:
-                  </h4>
-                  <ul className="list-disc ml-5 text-zinc-600 dark:text-zinc-300 space-y-1">
-                    <li>
-                      Dark sky background makes Stitch comfortable as he is an
-                      alien.👽
-                    </li>
-                    <li>
-                      Music to listen to by a hobbyist producer/web developer.
-                    </li>
-                    <li>
-                      Shooting stars for him to make wishes to destroy Earth.🌍
-                    </li>
-                    <li>
-                      Responsive design fits mobile as well as desktop screens.
-                    </li>
-                  </ul>
-                </div>
-                <div className="pt-3 pb-2">
-                  <a
-                    className="button-primary inline-flex items-center space-x-2"
-                    href="https://prodbynalin.netlify.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span>View Live</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    {proj.imageType === "video" ? (
+                      <video
+                        src={proj.imageSrc}
+                        autoPlay
+                        loop
+                        muted
+                        className="rounded-lg w-full object-contain relative"
                       />
-                    </svg>
-                  </a>
+                    ) : (
+                      <img
+                        src={proj.imageSrc}
+                        alt={proj.title}
+                        className="rounded-lg w-full object-contain relative"
+                      />
+                    )}
+                  </div>
                 </div>
-                <div className="pt-4 flex flex-wrap gap-2">
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-purple-400/20 to-purple-500/30 text-purple-800 dark:text-purple-300">
-                    MERN
-                  </span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-pink-400/20 to-pink-500/30 text-pink-800 dark:text-pink-300">
-                    Webhooks
-                  </span>
-                  <span className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-indigo-400/20 to-indigo-500/30 text-indigo-800 dark:text-indigo-300">
-                    Framer Motion
-                  </span>
-                </div>
-              </div>
-              {/* Project Image (Right on desktop) */}
-              <div className="flex justify-center items-center order-2 lg:order-2 p-8">
                 <div
-                  className="w-9/10 animate-hover cursor-pointer relative"
-                  onClick={() => openModal("/prodbynalinmovkup.png")}
+                  className={`p-8 space-y-5 ${
+                    idx % 2 === 1 ? "order-1 lg:order-2" : "order-2 lg:order-1"
+                  }`}
                 >
-                  <img
-                    src="/bigger.png"
-                    alt="Prod by Nalin Portfolio"
-                    className="rounded-lg w-full object-contain relative"
-                  />
+                  <h3 className="text-2xl font-semibold text-slate-700 dark:text-primarytext-dark">
+                    {proj.title}
+                  </h3>
+                  <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                    {proj.description}
+                  </p>
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-slate-700 dark:text-primarytext-dark">
+                      Key Features:
+                    </h4>
+                    <ul className="list-disc ml-5 text-zinc-600 dark:text-zinc-300 space-y-1">
+                      {proj.features.map((f) => (
+                        <li key={f}>{f}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="pt-3 pb-2">
+                    <a
+                      className="button-primary inline-flex items-center space-x-2"
+                      href={proj.link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span>{proj.link.label}</span>
+                      {proj.link.icon}
+                    </a>
+                  </div>
+                  <div className="pt-4 flex flex-wrap gap-2">
+                    {proj.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full text-sm bg-gradient-to-r from-accent-yellow-light/20 to-accent-yellow/30 text-accent-yellow-dark dark:text-accent-yellow-light"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
+            {/* ...other projects if any... */}
           </div>
         </div>
       </div>
-
       {/* Modal Portal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-[99999]">
