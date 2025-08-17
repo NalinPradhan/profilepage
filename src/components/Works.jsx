@@ -18,18 +18,40 @@ const projects = [
     imageType: "video",
     imageSrc:
       "https://res.cloudinary.com/dlyxpzd0s/video/upload/v1752055585/rr2_wbgaet.mp4",
-    link: {
-      url: "https://www.figma.com/proto/e0FShubHzZjWdgBhtVDpAm/Untitled?page-id=0%3A1&node-id=47-92&m=draw&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=47%3A92&t=3zdgTGtK5JUrhFpe-1",
-      label: "View prototype",
-      icon: (
-        <img
-          width="18"
-          height="18"
-          src="https://img.icons8.com/ios-filled/50/figma--v1.png"
-          alt="figma--v1"
-        />
-      ),
-    },
+    link: [
+      {
+        url: "https://www.figma.com/proto/e0FShubHzZjWdgBhtVDpAm/Untitled?page-id=0%3A1&node-id=47-92&m=draw&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=47%3A92&t=3zdgTGtK5JUrhFpe-1",
+        label: "View prototype",
+        icon: (
+          <img
+            width="18"
+            height="18"
+            src="https://img.icons8.com/ios-filled/50/figma--v1.png"
+            alt="figma--v1"
+          />
+        ),
+      },
+      {
+        url: "https://kuengacholingincense.netlify.app/",
+        label: "View Live",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        ),
+      },
+    ],
   },
   {
     title: "Food Judge",
@@ -179,7 +201,6 @@ function Works() {
                 key={proj.title}
                 className="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-zinc-200 dark:border-zinc-800"
               >
-                {/* Alternate order for image/description */}
                 <div
                   className={`flex justify-center items-center p-8 ${
                     idx % 2 === 1 ? "lg:order-2 " : " lg:order-2"
@@ -227,16 +248,33 @@ function Works() {
                       ))}
                     </ul>
                   </div>
-                  <div className="pt-3 pb-2">
-                    <a
-                      className="button-primary inline-flex items-center space-x-2"
-                      href={proj.link.url}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span>{proj.link.label}</span>
-                      {proj.link.icon}
-                    </a>
+                  <div className="pt-3 pb-2 flex flex-wrap gap-2">
+                    {Array.isArray(proj.link)
+                      ? proj.link.map((lnk, i) => (
+                          <a
+                            key={i}
+                            className="button-primary inline-flex items-center space-x-2"
+                            href={lnk.url}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <span className="dark:text-black">{lnk.label}</span>
+                            {lnk.icon}
+                          </a>
+                        ))
+                      : proj.link && (
+                          <a
+                            className="button-primary inline-flex items-center space-x-2"
+                            href={proj.link.url}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <span className="dark:text-black">
+                              {proj.link.label}
+                            </span>
+                            {proj.link.icon}
+                          </a>
+                        )}
                   </div>
                   <div className="pt-4 flex flex-wrap gap-2">
                     {proj.tags.map((tag) => (
