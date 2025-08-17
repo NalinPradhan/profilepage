@@ -88,7 +88,7 @@ function Intro() {
             <ul className="list-disc pl-3 space-y-2">
               <li>
                 <span className="font-medium">Front-End:</span> HTML5, CSS3,
-                JavaScript (ES6+), React.js
+                Tailwind CSS JavaScript (ES6+), React.js
               </li>
               <li>
                 <span className="bg-gradient-to-r from-accent-rose-light to-accent-rose bg-clip-text text-transparent font-medium">
@@ -96,7 +96,8 @@ function Intro() {
                 </span>{" "}
               </li>
               <li>
-                <span className="font-medium">Databases:</span> MongoDB, MySQL
+                <span className="font-medium">Databases:</span> MongoDB, MySQL,
+                PostgreSQL
               </li>
               <li>
                 <span className="font-medium">Version Control:</span> Git,
@@ -111,7 +112,8 @@ function Intro() {
                 and integration
               </li>
               <li>
-                <span className="font-medium">Tools:</span> Webpack, Docker
+                <span className="font-medium">Tools:</span> Webpack, Docker,
+                Postman, Figma
               </li>
             </ul>
           </div>

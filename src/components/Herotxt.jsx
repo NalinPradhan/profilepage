@@ -74,14 +74,14 @@ function Herotxt() {
             ref={web}
             className="bg-gradient-to-r from-accent-cyan-light to-accent-cyan bg-clip-text text-transparent"
           >
-            Front-End Flair,
+            Full Stack{" "}
           </span>
           <span
             ref={full}
             className="bg-gradient-to-r from-accent-rose to-accent-rose-light bg-clip-text text-transparent md:text-5xl lg:text-7xl text-2xl"
           >
             {" "}
-            Full Stack Power{" "}
+            Developer
           </span>
         </h1>
 
