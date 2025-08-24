@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 // import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import Skills from "./Skills";
 
 gsap.registerPlugin(useGSAP);
 function Intro() {
@@ -44,7 +45,7 @@ function Intro() {
     <>
       <div
         id="here"
-        className="m-4 sm:m-20 p-5  grid grid-cols-1 lg:grid-cols-3 gap-6"
+        className="m-4 sm:m-20 p-5 grid grid-cols-1 lg:grid-cols-2 gap-6"
       >
         <div className="card overflow-hidden h-auto lg:h-80 p-6 flex flex-col">
           <div className="section-heading text-xl mb-3">About Me</div>
@@ -82,43 +83,6 @@ function Intro() {
           </p>
         </div>
 
-        <div className="card overflow-hidden h-auto lg:h-80 p-6 flex flex-col relative">
-          <div className="section-heading text-xl mb-3">Skills</div>
-          <div className="leading-relaxed text-zinc-700 dark:text-zinc-300">
-            <ul className="list-disc pl-3 space-y-2">
-              <li>
-                <span className="font-medium">Front-End:</span> HTML5, CSS3,
-                Tailwind CSS JavaScript (ES6+), React.js
-              </li>
-              <li>
-                <span className="bg-gradient-to-r from-accent-rose-light to-accent-rose bg-clip-text text-transparent font-medium">
-                  MERN
-                </span>{" "}
-              </li>
-              <li>
-                <span className="font-medium">Databases:</span> MongoDB, MySQL,
-                PostgreSQL
-              </li>
-              <li>
-                <span className="font-medium">Version Control:</span> Git,
-                GitHub
-              </li>
-              <li>
-                <span className="font-medium">Design:</span> Responsive Design,
-                UI/UX, CSS frameworks
-              </li>
-              <li>
-                <span className="font-medium">APIs:</span> RESTful development
-                and integration
-              </li>
-              <li>
-                <span className="font-medium">Tools:</span> Webpack, Docker,
-                Postman, Figma
-              </li>
-            </ul>
-          </div>
-        </div>
-
         <div className="card overflow-hidden h-auto lg:h-80 p-6 flex flex-col">
           <div className="section-heading text-xl mb-3">Contact Me</div>
           <p className="leading-relaxed text-zinc-700 dark:text-zinc-300 mb-2">
@@ -144,6 +108,14 @@ function Intro() {
               />
             </div> */}
           </p>
+        </div>
+
+        {/* Skills section takes full width */}
+        <div className="lg:col-span-2 card overflow-hidden h-auto p-6 flex flex-col relative">
+          <div className="section-heading text-xl mb-3">Skills & Technologies</div>
+          <div className="leading-relaxed text-zinc-700 dark:text-zinc-300">
+            <Skills />
+          </div>
         </div>
       </div>
     </>
