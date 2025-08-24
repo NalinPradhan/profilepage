@@ -140,7 +140,7 @@ const projects = [
       </>
     ),
     features: ["Playful UI", "Music Player"],
-    tags: ["MERN", "UI/UX Design", "Muisc Player"],
+    tags: ["MERN", "UI/UX Design", "Music Player"],
     imageType: "image",
     imageSrc: "/prodbynalinmovkup.png",
     link: {
