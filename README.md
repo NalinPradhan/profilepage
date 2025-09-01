@@ -1,6 +1,4 @@
-# Nalin Pradhan - Portfolio Website
-
-![Portfolio Preview](public/avatar.png)
+# My Portfolio
 
 ## 🚀 Live Demo
 
@@ -16,5 +14,3 @@ This is my personal portfolio website showcasing my work as a Full Stack Develop
 - **Tailwind CSS**: Utility-first styling
 - **GSAP**: Animations and transitions
 - **Netlify**: Hosting and deployment
-
-Made with ❤️ by Nalin Pradhan
