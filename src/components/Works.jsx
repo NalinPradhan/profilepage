@@ -253,23 +253,23 @@ function Works() {
                       ? proj.link.map((lnk, i) => (
                           <a
                             key={i}
-                            className="button-primary inline-flex items-center space-x-2"
+                            className="bg-[#FAD44F] button-primary inline-flex items-center space-x-2"
                             href={lnk.url}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <span className="dark:text-black">{lnk.label}</span>
+                            <span className="text-black">{lnk.label}</span>
                             {lnk.icon}
                           </a>
                         ))
                       : proj.link && (
                           <a
-                            className="button-primary inline-flex items-center space-x-2"
+                            className="bg-[#FAD44F] button-primary inline-flex items-center space-x-2"
                             href={proj.link.url}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <span className="dark:text-black">
+                            <span className="text-black">
                               {proj.link.label}
                             </span>
                             {proj.link.icon}
@@ -289,7 +289,6 @@ function Works() {
                 </div>
               </div>
             ))}
-            {/* ...other projects if any... */}
           </div>
         </div>
       </div>

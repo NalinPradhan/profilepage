@@ -50,7 +50,7 @@
   }
 
   .button-primary {
-    @apply button bg-accent-cyan hover:bg-accent-cyan-dark text-white;
+    @apply button bg-accent-cyan hover:bg-[#eccd5e] text-white;
   }
 
   .button-secondary {
