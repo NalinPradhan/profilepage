@@ -60,8 +60,6 @@ const Footer = () => {
         borderTopRightRadius: "30px",
       }}
     >
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-accent-cyan-light/0 via-accent-cyan/30 to-accent-cyan-light/0"></div>
-
       <div
         ref={contentRef}
         className="lg:h-96 md:h-80 gap-7 flex justify-center items-center pt-12"
@@ -176,6 +174,30 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+          </div>
+          <div className="flex space-x-2 sm:space-x-4">
+            <div className="mr-4 ">
+              <a
+                href="https://drive.google.com/uc?export=download&id=1W60g-QexqewjwDN5umoD-og-IeC5QU-C"
+                className="flex items-center  bg-gradient-to-br from-accent-cyan-light/10 to-accent-rose-light/10 dark:from-accent-cyan-dark/10 dark:to-accent-rose-dark/10 border border-zinc-200 dark:border-zinc-700 rounded-full cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300 px-2 py-1 sm:px-3 sm:py-1"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                Download Resume
+              </a>
+            </div>
           </div>
         </div>
       </div>
