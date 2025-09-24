@@ -58,14 +58,14 @@ function Herotxt() {
           className="mt-6 motion-enter-active animate-hover relative z-10"
           onClick={animateIcon}
         >
-          <div className="absolute -inset-0.5 bg-gradient-to-r  rounded-full blur opacity-75 animate-pulse-slow"></div>
+          <div className="absolute -inset-0.5 bg-gradient-to-r  rounded-full w-56 blur opacity-75 animate-pulse-slow"></div>
           <img
             style={{ position: "relative" }}
             alt="hero"
             width="100"
             height="100"
-            className="rounded-full w-15   object-cover z-10 relative"
-            src="/secondavatar.png"
+            className="rounded-full w-15    object-cover z-10 relative"
+            src="/69.jpg"
           />
         </div>
 
