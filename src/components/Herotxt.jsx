@@ -72,13 +72,13 @@ function Herotxt() {
         <h1 className="mt-10 font-semibold md:text-5xl lg:text-7xl text-2xl space-grotesk-font tracking-tight relative z-10">
           <span
             ref={web}
-            className="bg-gradient-to-r from-accent-cyan-light to-accent-cyan bg-clip-text text-transparent"
+            className="bg-gradient-to-r from-accent-yellow-light to-accent-cyan bg-clip-text text-transparent"
           >
             Full Stack{" "}
           </span>
           <span
             ref={full}
-            className="bg-gradient-to-r from-accent-rose to-accent-rose-light bg-clip-text text-transparent md:text-5xl lg:text-7xl text-2xl"
+            className="bg-gradient-to-r to-accent-yellow-dark from-accent-cyan  bg-clip-text text-transparent md:text-5xl lg:text-7xl text-2xl"
           >
             {" "}
             Developer
