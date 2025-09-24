@@ -104,9 +104,9 @@ function Intro() {
                 GitHub
               </li>
               <li>
-                <span className="bg-gradient-to-r from-accent-cyan-light to-accent-rose bg-clip-text text-transparent font-medium">
-                  AWS
-                </span>{" "}
+                <span className="bg-gradient-to-r from-accent-cyan-dark to-accent-rose bg-clip-text text-transparent font-medium">
+                  AWS, AI, Large Language Models and Agents{" "}
+                </span>
               </li>
               <li>
                 <span className="font-medium">Design:</span> Responsive Design,
