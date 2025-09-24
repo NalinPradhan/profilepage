@@ -91,8 +91,8 @@ function Intro() {
                 Tailwind CSS JavaScript (ES6+), React.js
               </li>
               <li>
-                <span className="bg-gradient-to-r from-accent-rose-light to-accent-rose bg-clip-text text-transparent font-medium">
-                  MERN
+                <span className="bg-gradient-to-r from-accent-cyan-dark to-accent-rose bg-clip-text text-transparent font-medium">
+                  MERN and Next JS
                 </span>{" "}
               </li>
               <li>
@@ -102,6 +102,11 @@ function Intro() {
               <li>
                 <span className="font-medium">Version Control:</span> Git,
                 GitHub
+              </li>
+              <li>
+                <span className="bg-gradient-to-r from-accent-cyan-light to-accent-rose bg-clip-text text-transparent font-medium">
+                  AWS
+                </span>{" "}
               </li>
               <li>
                 <span className="font-medium">Design:</span> Responsive Design,
