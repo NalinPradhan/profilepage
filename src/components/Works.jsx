@@ -5,12 +5,71 @@ const projects = [
     title: "Bhutan Incense",
     description: (
       <>
-        <span>🫧 </span>A product showcase for Bhutan Incense. The company
-        creates{" "}
+        <span>🫧 </span>
+        A product showcase for Bhutan Incense. The company creates
+        <br />
         <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
           <em>handcrafted incense </em>
         </span>
+        <br />
         using traditional Bhutanese methods.
+      </>
+    ),
+    features: ["Modern Design", "Smooth Animations"],
+    tags: ["Figma", "UI/UX", "GSAP Animations", "Product Showcase"],
+    imageType: "video",
+    imageSrc:
+      "https://res.cloudinary.com/dlyxpzd0s/video/upload/v1752055585/rr2_wbgaet.mp4",
+    link: [
+      {
+        url: "https://www.figma.com/proto/e0FShubHzZjWdgBhtVDpAm/Untitled?page-id=0%3A1&node-id=47-92&m=draw&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=47%3A92&t=3zdgTGtK5JUrhFpe-1",
+        label: "View prototype",
+        icon: (
+          <img
+            width="18"
+            height="18"
+            src="https://img.icons8.com/ios-filled/50/figma--v1.png"
+            alt="figma--v1"
+          />
+        ),
+      },
+      {
+        url: "https://kuengacholingincense.netlify.app/",
+        label: "View Live",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        ),
+      },
+    ],
+  },
+  {
+    title: "AI Website Summarizer",
+    description: (
+      <>
+        <span>🫧 </span>
+        This is a simple and generic website summarizer which uses Beautiful
+        Soup to scrape web pages and OpenAI's gpt-3.5-turbo to generate concise
+        summaries.🪄
+        <br />
+        P.S: Some websites have strict
+        <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
+          <em> safety regulations </em>
+        </span>
+        🦺 due to which web scraping might fail and summaries may not be
+        generated.
       </>
     ),
     features: ["Modern Design", "Smooth Animations"],
@@ -57,11 +116,14 @@ const projects = [
     title: "Food Judge",
     description: (
       <>
-        <span>🌟 </span>A fun app which uses food prefernces to guess which part
-        of India the player is from.{" "}
+        <span>🌟 </span>
+        A fun app which uses food prefernces to guess which part of India the
+        player is from.
+        <br />
         <span className="bg-gradient-to-r from-accent-yellow to-accent-yellow-light bg-clip-text text-transparent font-medium">
           <em>Central,Northern, Eastern, Western and Southern </em>
         </span>
+        <br />
         regions of India have different food preferences and this app uses that
         to guess the region.
       </>
@@ -95,9 +157,11 @@ const projects = [
     title: "Birdie - Service Provider App",
     description: (
       <>
-        <span className="">🫧 </span>A modern mobile application designed to
-        connect users with professional movers and maids. Built with a focus on
-        user experience and clean design,{" "}
+        <span className="">🫧 </span>
+        A modern mobile application designed to connect users with professional
+        movers and maids. Built with a focus on user experience and clean
+        design,
+        <br />
         <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
           <em>
             Birdie makes finding and booking service providers effortless.
@@ -131,9 +195,10 @@ const projects = [
     title: "prodbynalin",
     description: (
       <>
-        <span className="text-sm">🎙️</span>A personal project which I built to
-        post the beats I make. The UI is inspired by one of my favourite cartoon
-        character{" "}
+        <span className="text-sm">🎙️</span>
+        A personal project which I built to post the beats I make. The UI is
+        inspired by one of my favourite cartoon character
+        <br />
         <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
           <em>Stitch. </em>
         </span>
