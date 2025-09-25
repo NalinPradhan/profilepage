@@ -59,7 +59,7 @@ const projects = [
     title: "AI Website Summarizer",
     description: (
       <>
-        <span>🫧 </span>
+        <span>🤖 </span>
         This is a simple and generic website summarizer which uses Beautiful
         Soup to scrape web pages and OpenAI's gpt-3.5-turbo to generate concise
         summaries.🪄
@@ -69,7 +69,7 @@ const projects = [
           <em> safety regulations </em>
         </span>
         🦺 due to which web scraping might fail and summaries may not be
-        generated.
+        generated. Ex: facebook.com, instagram.com, twiiter.com.
       </>
     ),
     features: ["Modern Design", "Smooth Animations"],
