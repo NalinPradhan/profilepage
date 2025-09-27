@@ -11,7 +11,6 @@ const projects = [
         <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
           <em>handcrafted incense </em>
         </span>
-        <br />
         using traditional Bhutanese methods.
       </>
     ),
@@ -61,37 +60,25 @@ const projects = [
       <>
         <span>🤖 </span>
         This is a simple and generic website summarizer which uses Beautiful
-        Soup to scrape web pages and OpenAI's gpt-3.5-turbo to generate concise
-        summaries.🪄
+        Soup to scrape web pages and OpenAI's gpt-3.5-turbo through API requests
+        to generate concise summaries.🪄
+        <br />
         <br />
         P.S: Some websites have strict
         <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
           <em> safety regulations </em>
         </span>
         🦺 due to which web scraping might fail and summaries may not be
-        generated. Ex: facebook.com, instagram.com, twiiter.com.
+        generated. Ex: facebook.com, instagram.com, twitter.com.
       </>
     ),
-    features: ["Modern Design", "Smooth Animations"],
-    tags: ["Figma", "UI/UX", "GSAP Animations", "Product Showcase"],
-    imageType: "video",
-    imageSrc:
-      "https://res.cloudinary.com/dlyxpzd0s/video/upload/v1752055585/rr2_wbgaet.mp4",
+    features: ["AI powered", "Simplistic Utility website", "Web scraping"],
+    tags: ["OpenAI", "Gpt-3.5 turbo", "Simple AI App", "Python"],
+    imageType: "image",
+    imageSrc: "/ai summarizer.png",
     link: [
       {
-        url: "https://www.figma.com/proto/e0FShubHzZjWdgBhtVDpAm/Untitled?page-id=0%3A1&node-id=47-92&m=draw&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=47%3A92&t=3zdgTGtK5JUrhFpe-1",
-        label: "View prototype",
-        icon: (
-          <img
-            width="18"
-            height="18"
-            src="https://img.icons8.com/ios-filled/50/figma--v1.png"
-            alt="figma--v1"
-          />
-        ),
-      },
-      {
-        url: "https://kuengacholingincense.netlify.app/",
+        url: "https://aismartsummarize.netlify.app/",
         label: "View Live",
         icon: (
           <svg
@@ -109,6 +96,10 @@ const projects = [
             />
           </svg>
         ),
+      },
+      {
+        url: "https://www.linkedin.com/in/eddonner/",
+        label: "Who taught me?💈",
       },
     ],
   },
@@ -318,13 +309,28 @@ function Works() {
                       ? proj.link.map((lnk, i) => (
                           <a
                             key={i}
-                            className="bg-[#FAD44F] button-primary inline-flex items-center space-x-2"
+                            className={
+                              lnk.label === "Who taught me?💈"
+                                ? "relative rounded-full px-6 py-3 font-medium bg-transparent border border-gray-600 dark:border-white transition-all duration-300 hover:scale-105 active:scale-95 inline-flex items-center justify-center space-x-2"
+                                : "bg-[#FAD44F] button-primary inline-flex items-center space-x-2"
+                            }
                             href={lnk.url}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <span className="text-black">{lnk.label}</span>
-                            {lnk.icon}
+                            {/* No gradient effects for simplistic design */}
+                            <span
+                              className={
+                                lnk.label === "Who taught me?💈"
+                                  ? "text-gray-700 dark:text-white font-medium whitespace-nowrap"
+                                  : "text-black"
+                              }
+                            >
+                              {lnk.label}
+                            </span>
+                            {lnk.icon && (
+                              <div className="relative z-10">{lnk.icon}</div>
+                            )}
                           </a>
                         ))
                       : proj.link && (
