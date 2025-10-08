@@ -8,6 +8,7 @@ import Herotxt from "./components/Herotxt";
 import Intro from "./components/intro";
 import Works from "./components/Works";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +26,7 @@ function App() {
       {shownav ? <Intro /> : null}
       {shownav ? <Works /> : null}
       {shownav ? <Footer /> : null}
+      {shownav ? <Chatbot /> : null}
     </>
   );
 }
