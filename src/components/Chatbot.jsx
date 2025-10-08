@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 
 function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,7 +108,7 @@ function Chatbot() {
       {isOpen && (
         <div className="fixed bottom-24 right-6 z-50 w-96 max-w-[calc(100vw-3rem)] h-[500px] bg-light-card dark:bg-dark-card border border-zinc-200 dark:border-zinc-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-accent-cyan  to-accent-rose p-4 text-white">
+          <div className="bg-gradient-to-r from-accent-cyan to-accent-rose p-4 text-white">
             <h3 className="font-semibold text-lg">I am Nalin's AI Assistant</h3>
             <p className="text-sm opacity-90">Ask me anything about him!</p>
           </div>
@@ -128,10 +129,57 @@ function Chatbot() {
                       : "bg-light-accent dark:bg-dark-accent text-primarytext-light dark:text-primarytext-dark"
                   }`}
                 >
-                  <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                  {msg.role === "assistant" ? (
+                    <div className="text-sm prose prose-sm max-w-none prose-headings:text-primarytext-light dark:prose-headings:text-primarytext-dark prose-p:text-primarytext-light dark:prose-p:text-primarytext-dark prose-strong:text-primarytext-light dark:prose-strong:text-primarytext-dark prose-ul:text-primarytext-light dark:prose-ul:text-primarytext-dark">
+                      <ReactMarkdown
+                        components={{
+                          h1: ({ node, ...props }) => (
+                            <h1 className="text-lg font-bold mb-2" {...props} />
+                          ),
+                          h2: ({ node, children, ...props }) => (
+                            <h2
+                              className="text-base font-bold mb-1"
+                              aria-level="2"
+                              {...props}
+                            >
+                              {children && children.length > 0 ? (
+                                children
+                              ) : (
+                                <span aria-hidden="true">Heading</span>
+                              )}
+                            </h2>
+                          ),
+                          h3: ({ node, ...props }) => (
+                            <h3
+                              className="text-sm font-semibold mb-1"
+                              {...props}
+                            />
+                          ),
+                          p: ({ node, ...props }) => (
+                            <p className="mb-2 last:mb-0" {...props} />
+                          ),
+                          ul: ({ node, ...props }) => (
+                            <ul className="list-disc ml-4 mb-2" {...props} />
+                          ),
+                          li: ({ node, ...props }) => (
+                            <li className="mb-1" {...props} />
+                          ),
+                          strong: ({ node, ...props }) => (
+                            <strong className="font-semibold" {...props} />
+                          ),
+                        }}
+                      >
+                        {msg.content}
+                      </ReactMarkdown>
+                    </div>
+                  ) : (
+                    <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                  )}
                 </div>
               </div>
             ))}
+
+            {/* Loading indicator */}
             {isLoading && (
               <div className="flex justify-start">
                 <div className="bg-light-accent dark:bg-dark-accent rounded-2xl px-4 py-2">
