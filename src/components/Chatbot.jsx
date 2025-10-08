@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
 
 function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +21,79 @@ function Chatbot() {
     scrollToBottom();
   }, [messages]);
 
+  // Simple markdown-like formatter
+  const formatMessage = (content) => {
+    const lines = content.split("\n");
+    const formattedLines = lines.map((line, index) => {
+      // Handle headers
+      if (line.startsWith("### ")) {
+        return (
+          <h3 key={index} className="text-sm font-semibold mb-1 mt-2">
+            {line.replace("### ", "")}
+          </h3>
+        );
+      }
+      if (line.startsWith("## ")) {
+        return (
+          <h2 key={index} className="text-base font-bold mb-1 mt-2">
+            {line.replace("## ", "")}
+          </h2>
+        );
+      }
+      if (line.startsWith("# ")) {
+        return (
+          <h1 key={index} className="text-lg font-bold mb-2 mt-2">
+            {line.replace("# ", "")}
+          </h1>
+        );
+      }
+
+      // Handle bullet points
+      if (line.startsWith("- ")) {
+        return (
+          <div key={index} className="flex items-start mb-1">
+            <span className="mr-2 mt-1">•</span>
+            <span>
+              {line
+                .replace("- ", "")
+                .replace(/\*\*(.*?)\*\*/g, (match, text) => text)}
+            </span>
+          </div>
+        );
+      }
+
+      // Handle bold text in regular paragraphs
+      if (line.trim() && !line.startsWith("#") && !line.startsWith("-")) {
+        const parts = line.split(/(\*\*.*?\*\*)/g);
+        const formattedParts = parts.map((part, partIndex) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            return (
+              <strong key={partIndex} className="font-semibold">
+                {part.slice(2, -2)}
+              </strong>
+            );
+          }
+          return part;
+        });
+
+        return (
+          <p key={index} className="mb-2">
+            {formattedParts}
+          </p>
+        );
+      }
+
+      // Empty lines for spacing
+      if (!line.trim()) {
+        return <div key={index} className="h-1"></div>;
+      }
+
+      return null;
+    });
+
+    return formattedLines.filter((line) => line !== null);
+  };
+
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
 
@@ -31,7 +103,6 @@ function Chatbot() {
     setIsLoading(true);
 
     try {
-      // Always use the Netlify function endpoint
       const response = await fetch("/.netlify/functions/chat", {
         method: "POST",
         headers: {
@@ -79,6 +150,9 @@ function Chatbot() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-accent-yellow-light to-accent-rose rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
+        aria-label={
+          isOpen ? "Close chat" : "Open chat with Nalin's AI assistant"
+        }
       >
         {isOpen ? (
           <svg
@@ -87,6 +161,7 @@ function Chatbot() {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -109,7 +184,7 @@ function Chatbot() {
         <div className="fixed bottom-24 right-6 z-50 w-96 max-w-[calc(100vw-3rem)] h-[500px] bg-light-card dark:bg-dark-card border border-zinc-200 dark:border-zinc-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-accent-cyan to-accent-rose p-4 text-white">
-            <h3 className="font-semibold text-lg">I am Nalin's AI Assistant</h3>
+            <h2 className="font-semibold text-lg">Nalin's AI Assistant</h2>
             <p className="text-sm opacity-90">Ask me anything about him!</p>
           </div>
 
@@ -130,40 +205,7 @@ function Chatbot() {
                   }`}
                 >
                   {msg.role === "assistant" ? (
-                    <div className="text-sm prose prose-sm max-w-none prose-headings:text-primarytext-light dark:prose-headings:text-primarytext-dark prose-p:text-primarytext-light dark:prose-p:text-primarytext-dark prose-strong:text-primarytext-light dark:prose-strong:text-primarytext-dark prose-ul:text-primarytext-light dark:prose-ul:text-primarytext-dark">
-                      <ReactMarkdown
-                        components={{
-                          h1: ({ node, ...props }) => (
-                            <h1 className="text-lg font-bold mb-2" {...props} />
-                          ),
-                          h2: ({ node, children, ...props }) => (
-                            <h2 className="text-base font-bold mb-1" {...props}>
-                              {children}
-                            </h2>
-                          ),
-                          h3: ({ node, ...props }) => (
-                            <h3
-                              className="text-sm font-semibold mb-1"
-                              {...props}
-                            />
-                          ),
-                          p: ({ node, ...props }) => (
-                            <p className="mb-2 last:mb-0" {...props} />
-                          ),
-                          ul: ({ node, ...props }) => (
-                            <ul className="list-disc ml-4 mb-2" {...props} />
-                          ),
-                          li: ({ node, ...props }) => (
-                            <li className="mb-1" {...props} />
-                          ),
-                          strong: ({ node, ...props }) => (
-                            <strong className="font-semibold" {...props} />
-                          ),
-                        }}
-                      >
-                        {msg.content}
-                      </ReactMarkdown>
-                    </div>
+                    <div className="text-sm">{formatMessage(msg.content)}</div>
                   ) : (
                     <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
                   )}
@@ -208,6 +250,7 @@ function Chatbot() {
                 onClick={handleSend}
                 disabled={isLoading || !input.trim()}
                 className="px-4 py-2 bg-gradient-to-r from-accent-cyan to-accent-rose text-white rounded-full hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-label="Send message"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -215,6 +258,7 @@ function Chatbot() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
