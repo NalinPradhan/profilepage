@@ -25,6 +25,7 @@ function App() {
       {shownav ? <Herotxt /> : null}
       {shownav ? <Intro /> : null}
       {shownav ? <Works /> : null}
+      {shownav ? <Works /> : null}
       {shownav ? <Footer /> : null}
       {shownav ? <Chatbot /> : null}
     </>
