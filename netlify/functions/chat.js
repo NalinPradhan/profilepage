@@ -4,7 +4,7 @@ const path = require("path");
 
 // Load knowledge base
 const knowledge_base = fs.readFileSync(
-  path.join(__dirname, "..", "..", "knowledge_base.txt"),
+  path.join(__dirname, "knowledge_base.txt"), // Same directory as the function
   "utf-8"
 );
 
