@@ -137,16 +137,8 @@ function Chatbot() {
                             <h1 className="text-lg font-bold mb-2" {...props} />
                           ),
                           h2: ({ node, children, ...props }) => (
-                            <h2
-                              className="text-base font-bold mb-1"
-                              aria-level="2"
-                              {...props}
-                            >
-                              {children && children.length > 0 ? (
-                                children
-                              ) : (
-                                <span aria-hidden="true">Heading</span>
-                              )}
+                            <h2 className="text-base font-bold mb-1" {...props}>
+                              {children}
                             </h2>
                           ),
                           h3: ({ node, ...props }) => (
