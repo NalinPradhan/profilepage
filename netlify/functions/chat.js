@@ -6,8 +6,8 @@ const knowledge_base = `
 
 ## Professional Background
 Nalin Pradhan is a Full Stack Developer with expertise in modern web technologies. He is passionate about solving complex problems and finds the greatest satisfaction in overcoming technical challenges. His journey into tech started with the typical fascination with "cool tech guys in movies," but what truly hooked him was the blissful feeling of solving problems - from getting a simple pyramid of asterisk patterns right to tackling increasingly complex challenges.
- Started coding journey in [year] with fascination for problem-solving
-- Self-taught developer who enjoys the challenge of learning new technologies
+ Started coding journey in 2018 when he was in class nine with fascination for problem-solving
+- Life-long learner mindset.
 - Experience working on diverse projects from traditional business websites to AI-powered applications
 - Strong focus on user experience and modern web development practices
 - Enjoys collaborating on exciting projects and tackling complex technical challenges
