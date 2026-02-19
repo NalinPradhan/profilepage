@@ -1,3 +1,4 @@
+#actually updating this file won't work as the knowledge base is hardcoded in chat.js  but i am still keeping it for ease of handling.
 # About Nalin Pradhan
 
 ## Professional Background

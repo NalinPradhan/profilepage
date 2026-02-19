@@ -5,12 +5,8 @@ const knowledge_base = `
 # About Nalin Pradhan
 
 ## Professional Background
-Nalin Pradhan is a Full Stack Developer with expertise in modern web technologies. He is passionate about solving complex problems and finds the greatest satisfaction in overcoming technical challenges. His journey into tech started with the typical fascination with "cool tech guys in movies," but what truly hooked him was the blissful feeling of solving problems - from getting a simple pyramid of asterisk patterns right to tackling increasingly complex challenges.
- Started coding journey in 2018 when he was in class nine with fascination for problem-solving
-- Life-long learner mindset.
-- Experience working on diverse projects from traditional business websites to AI-powered applications
-- Strong focus on user experience and modern web development practices
-- Enjoys collaborating on exciting projects and tackling complex technical challenges
+Nalin Pradhan is a Full Stack Developer with expertise in modern web technologies. He is passionate about solving complex problems and finds the greatest satisfaction in overcoming technical challenges.With a strong interest in AI, RAG workflows, and GPT‑based systems his work has always been driven by curiosity about how intelligent systems can enhance user experiences and solve complex problems. He finds the intersection of software engineering and applied AI both challenging and rewarding.
+ His journey into tech started with the typical fascination with "cool tech guys in movies," but what truly hooked him was the blissful feeling of solving problems - from getting a simple pyramid of asterisk patterns right to tackling increasingly complex challenges.
 
 ## Technical Skills
 
@@ -32,12 +28,15 @@ Nalin Pradhan is a Full Stack Developer with expertise in modern web technologie
 - MongoDB
 - MySQL
 - PostgreSQL
+- Firebase
 
 ### Cloud & AI
+-Firebase
+-IOT integration
 - AWS (Amazon Web Services)
 - AI and Machine Learning
 - Large Language Models (LLMs)
-- AI Agents
+- AI Agents and RAG
 - OpenAI API integration
 - GPT-3.5 Turbo
 
@@ -47,6 +46,7 @@ Nalin Pradhan is a Full Stack Developer with expertise in modern web technologie
 - Docker
 - Postman
 - Figma
+- Thingspeak
 
 ### Languages
 - Python (AI/ML applications, web scraping)
@@ -55,18 +55,25 @@ Nalin Pradhan is a Full Stack Developer with expertise in modern web technologie
 ## Notable Projects
 
 ### 1. Bhutan Incense
-A product showcase website for a company that creates handcrafted incense using traditional Bhutanese methods. Features modern design with smooth GSAP animations. Built with Figma for UI/UX design.
+A product showcase website for a company that creates handcrafted incense using traditional Bhutanese methods. Features modern design with smooth GSAP animations. Built with Figma for UI/UX design. In this project,he was tasked with creating a product‑showcase website for Bhutan Incense. The challenge was to design both the UI and UX while ensuring the brand’s core values were reflected throughout the site. Since the company produces traditional Bhutanese incense with distinctive packaging, he researched their brand identity and Bhutanese culture to craft a design that felt authentic rather than generic.
 
-### 2. AI Website Summarizer
+He incorporated cultural elements such as the Khorlo (Wheel of Life) from Buddhism and imagery of Himalayan forests, emphasizing the incense’s natural origins and spiritual roots. To balance tradition with modern appeal, I implemented smooth, purposeful animations and adhered to industry best practices for performance optimization, ensuring fast load times.
+
+### 2. Smart Irrigation System for Chandigarh University parks
+He developed a smart irrigation system for urban parks using IOT sensors(ESP 32) and Arduino. The project involved automating the irrigation triggers using data from sensors for temperature, humidity and Soil Moisture. The data is collected from the sensors, which goes to the Thingspeak console, from there the program fetches the data and decides whether to keep the water pumps off or on. 
+
+
+
+### 3. AI Website Summarizer
 An AI-powered utility that uses Beautiful Soup for web scraping and OpenAI's GPT-3.5 Turbo to generate concise website summaries. Demonstrates practical application of AI technology. Note: Some websites with strict safety regulations may not work due to web scraping restrictions.
 
-### 3. Food Judge
+### 4. Food Judge
 A playful React application that guesses which region of India a player is from based on their food preferences. Covers Central, Northern, Eastern, Western, and Southern regions of India.
 
-### 4. Birdie - Service Provider App
+### 5. Birdie - Service Provider App
 A modern mobile application designed to connect users with professional movers and maids. Features intuitive service provider search, clean UI design, user profile management, and a service rating system. High-fidelity prototype created in Figma.
 
-### 5. prodbynalin
+### 6. prodbynalin
 A personal project showcasing beats and music production. The UI is inspired by the cartoon character Stitch, featuring a playful design with an integrated music player. Built using the MERN stack.
 
 ## Contact Information
@@ -82,43 +89,6 @@ Nalin is driven by the satisfaction of problem-solving. He believes that the bli
 
 ## Education & Learning
 Recently completed a course on LLMs, agents, and chatbots, learning how to build chatbots with context knowledge. Continuously expanding knowledge in AI and modern web development practices.
-Schooling:
- Punakha Central School, Bhutan, Twelfth Grade Completed in 2021
- Phuentsholing Middle Secondary School, Bhutan, Ninth Grade Completed in 2019
- Phuentsholing Lower Secondary School, Bhutan, Third to Seventh Grade Completed in 2017 
- ## Location & Work Preferences
-- Based in Bhutan
-- Open to remote work opportunities
-- Available for freelance projects and collaborations
-- Timezone: [Your timezone]
-- Preferred communication: Email, LinkedIn
-## What I Can Help You With
-- Full-stack web application development
-- React.js frontend development with modern UI/UX
-- MERN stack applications
-- AI integration and chatbot development
-- Website redesigns and modernization
-- API development and integration
-- Database design and optimization
-## My Development Process
-- Start with understanding user needs and business requirements
-- Create wireframes and prototypes (using Figma)
-- Develop with mobile-first, responsive design approach
-- Implement with modern best practices and clean code
-- Test thoroughly across devices and browsers
-- Deploy with proper CI/CD practices
-Fun facts about Nalin:
--Produces beats and posts it in instagram(handle @prodbynalin), also sings and plays guitar.
--Lionel Messi fan
--Enjoys playing football a lot, during college days and school days used to play as a right winger for  school team
--He is a Desup and has won the inter company football tournament during Desup training times.
--Is a Golden Youth Award participant representing Chukha when he was in school.
--He believes in goodness of people and loves to help others. But does not expect fair treatment from everyone. Hopes for good but does not expect it. Assumes error but not malice from people.
-Career Objective:
-To help Bhutan grow in the field of technology and establish it in the global market. To help His Majesty's vision for the GMC(Gelephu Mindfulness City). To work in an organization where I can utilize my skills and knowledge to the fullest and contribute to the growth of the organization. To work in an environment where I can learn new skills and technologies and grow as a professional. 
-
-Miscellaneous:
-I dislike bed rotting and think it is the killer of productivity and youth in Bhutan and elsewhere. Doomscrolling is another productivity killer and I try to avoid it as much as possible. I love to read books, especially non-fiction and autobiographies. I am a foodie and my favourite dish is Bathup and Thukpa. I am a fitness enthusiast and love to stay fit and healthy. I believe in continuous learning and self-improvement. I am always endulged in an online course and am always reading several books at a time. I also love to watch movies like Forrest Gump, The Shawshank Redemption, John Wick, The Greenmile and other movies like that. I love dogs. I think Bhutan has a lot to offer the world in terms of harmony with nature and harmony in the society as well. That is, I think Bhutan can never see a outrageous revolt or protest like Nepal saw recently. It may be good or bad but what Bhutanese do is trust in their king and the leaders who are hopefully honest and want good for the country. I feel very responsible and accountable for my counntry even though i am a layman. I think everyone should feel the same way for their country. I love my country and will do anything to help it grow and prosper. I am someone who will never litter the surroundings with waste, even spitting in Bhutan is something I avoid.I just feel that others might do it and they are free to do so but I should protect my land and respect it at the same time.
 `;
 
 exports.handler = async (event, context) => {
