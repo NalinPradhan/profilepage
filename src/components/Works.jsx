@@ -55,6 +55,72 @@ const projects = [
     ],
   },
   {
+    title: "Smart Irrigation System for Chandigarh University",
+    description: (
+      <>
+        <span>🫗 </span>
+        An inelligent irrigation system designed for Chandigarh University,
+        utilizing IOT sensors
+        <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
+          <em> ESP 32 and DHT11 </em>
+        </span>
+        connected to Arduino to monitor soil moisture and automate watering. The
+        system is designed to optimize water usage and ensure healthy plant
+        growth across Chandigarh University parks.
+        <br />
+        <br /> However, the system can be deployed anyhere and can be used to
+        monitor and automate irrigation for any urban park.
+      </>
+    ),
+    features: ["IOT", "Automated Irrigation", "Smart Agriculture"],
+    tags: ["Firebase", "Arduino", "Dashboard Design"],
+    imageType: "video",
+    imageSrc:
+      "https://res.cloudinary.com/dlgxzzpkp/video/upload/v1771484922/Recording_2026-02-19_123658_ahgp2n.mp4",
+    link: [
+      {
+        url: "https://smartirrigationsystemcu.netlify.app/dashboard",
+        label: "View Live",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        ),
+      },
+      {
+        url: "https://drive.google.com/file/d/1WTTvBV4xHefc5SWJuZnGOlrBRGmS_K8e/view?usp=sharing",
+        label: "Project Report",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        ),
+      },
+    ],
+  },
+  {
     title: "AI Website Summarizer",
     description: (
       <>
