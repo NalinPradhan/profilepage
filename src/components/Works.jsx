@@ -64,12 +64,13 @@ const projects = [
         <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
           <em> ESP 32 and DHT11 </em>
         </span>
-        connected to Arduino to monitor soil moisture and automate watering. The
-        system is designed to optimize water usage and ensure healthy plant
-        growth across Chandigarh University parks.
+        connected to Arduino to automate watering. The system is designed to
+        optimize water usage and ensure healthy plant growth across Chandigarh
+        University parks.
         <br />
-        <br /> However, the system can be deployed anyhere and can be used to
-        monitor and automate irrigation for any urban park.
+        <br /> The system can be deployed anywhere and can be used to monitor
+        and automate irrigation for any urban park with backend adjustments and
+        integration.
       </>
     ),
     features: ["IOT", "Automated Irrigation", "Smart Agriculture"],
