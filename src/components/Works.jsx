@@ -316,7 +316,7 @@ function Works() {
         id="works"
         className="m-4 sm:m-20 p-5 relative z-0 border-t dark:border-hidden leading-snug "
       >
-        <h2 className="section-heading text-center mb-10">My Works</h2>
+        <h2 className="section-heading text-center mb-10">Projects</h2>
         <div className="space-y-16">
           <div className="card overflow-hidden p-0">
             {projects.map((proj, idx) => (
