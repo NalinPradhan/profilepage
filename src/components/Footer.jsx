@@ -24,7 +24,7 @@ const Footer = () => {
           end: "bottom top",
           scrub: true,
         },
-      }
+      },
     );
 
     // Float effect for the content
@@ -44,7 +44,7 @@ const Footer = () => {
           end: "top 40%",
           scrub: 1,
         },
-      }
+      },
     );
   }, []);
 
@@ -178,7 +178,7 @@ const Footer = () => {
           <div className="flex space-x-2 sm:space-x-4">
             <div className="mr-4 ">
               <a
-                href="https://drive.google.com/uc?export=download&id=1W60g-QexqewjwDN5umoD-og-IeC5QU-C"
+                href="https://drive.google.com/file/d/1dEnWfA18ZkaieAYTXt4SNHPSo-oaYky1/view?usp=sharing"
                 className="flex items-center  bg-gradient-to-br from-accent-cyan-light/10 to-accent-rose-light/10 dark:from-accent-cyan-dark/10 dark:to-accent-rose-dark/10 border border-zinc-200 dark:border-zinc-700 rounded-full cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300 px-2 py-1 sm:px-3 sm:py-1"
               >
                 <svg
