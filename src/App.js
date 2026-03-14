@@ -13,20 +13,20 @@ import Chatbot from "./components/Chatbot";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  const [shownav, setShowNav] = useState(false);
+  // const [shownav, setShowNav] = useState(false);
 
-  setTimeout(() => {
-    setShowNav(true);
-  }, 3300);
+  // setTimeout(() => {
+  //   setShowNav(true);
+  // }, 3300);
   return (
     <>
-      <Hero />
-      {shownav ? <Navbar /> : null}
-      {shownav ? <Herotxt /> : null}
-      {shownav ? <Intro /> : null}
-      {shownav ? <Works /> : null}
-      {shownav ? <Footer /> : null}
-      {shownav ? <Chatbot /> : null}
+      {/* <Hero /> */}
+      <Navbar />
+      <Herotxt />
+      <Intro />
+      <Works />
+      <Footer />
+      <Chatbot />
     </>
   );
 }

@@ -31,7 +31,7 @@ function Herotxt() {
         y: "-100",
         duration: 0.5,
         ease: "power3.inOut",
-      }
+      },
     );
     tl.fromTo(
       full.current,
@@ -45,7 +45,7 @@ function Herotxt() {
         duration: 1,
         ease: "power3.inOut",
       },
-      "-=0.5"
+      "-=0.5",
     );
     animateIcon();
   }, []);
@@ -62,10 +62,10 @@ function Herotxt() {
           <img
             style={{ position: "relative" }}
             alt="hero"
-            width="100"
-            height="100"
+            width="150"
+            height="150"
             className="rounded-full w-15    object-cover z-10 relative"
-            src="/69.jpg"
+            src="/propic.jpeg"
           />
         </div>
 

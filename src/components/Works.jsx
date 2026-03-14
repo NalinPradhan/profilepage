@@ -2,6 +2,63 @@ import React, { useState, useEffect } from "react";
 
 const projects = [
   {
+    title: "Portfolio AI Chatbot",
+    description: (
+      <>
+        <span>🤖 </span>
+        An interactive chatbot integrated directly into this portfolio to answer
+        questions about my background, skills, and projects.
+        <br />
+        <span className="bg-gradient-to-r from-accent-rose to-accent-rose-light dark:from-accent-yellow dark:to-accent-yellow-light bg-clip-text text-transparent font-medium">
+          <em>
+            Built with a React chat UI + Netlify serverless function + OpenAI
+            API.
+          </em>
+        </span>
+        <br />
+        It supports conversation history, typing/loading states, basic markdown
+        formatting, and portfolio-specific contextual replies.
+      </>
+    ),
+    features: [
+      "Context-aware Q&A about portfolio",
+      "React chat interface with loading states",
+      "Netlify Function backend integration",
+      "OpenAI-powered responses with conversation history",
+    ],
+    tags: [
+      "React",
+      "Netlify Functions",
+      "OpenAI API",
+      "Serverless",
+      "AI Assistant",
+    ],
+    imageType: "image",
+    imageSrc: "/Ai project.jpg",
+    link: [
+      {
+        // url: "https://nalinpradhan.netlify.app/",
+        label: "See bottom right corner!👀",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            {/* <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            /> */}
+          </svg>
+        ),
+      },
+    ],
+  },
+  {
     title: "Bhutan Incense",
     description: (
       <>
@@ -316,7 +373,9 @@ function Works() {
         id="works"
         className="m-4 sm:m-20 p-5 relative z-0 border-t dark:border-hidden leading-snug "
       >
-        <h2 className="section-heading text-center mb-10">Projects</h2>
+        <h2 className="section-heading text-center mb-10">
+          Projects ( {projects.length} )
+        </h2>
         <div className="space-y-16">
           <div className="card overflow-hidden p-0">
             {projects.map((proj, idx) => (
