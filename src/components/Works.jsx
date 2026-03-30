@@ -15,24 +15,14 @@ const projects = [
             API.
           </em>
         </span>
-        <br />
-        It supports conversation history, typing/loading states, basic markdown
-        formatting, and portfolio-specific contextual replies.
       </>
     ),
     features: [
+      "OpenAI-powered responses",
       "Context-aware Q&A about portfolio",
       "React chat interface with loading states",
-      "Netlify Function backend integration",
-      "OpenAI-powered responses with conversation history",
     ],
-    tags: [
-      "React",
-      "Netlify Functions",
-      "OpenAI API",
-      "Serverless",
-      "AI Assistant",
-    ],
+    tags: ["Netlify Functions", "OpenAI API", "AI Assistant"],
     imageType: "image",
     imageSrc: "/Ai project.jpg",
     link: [
