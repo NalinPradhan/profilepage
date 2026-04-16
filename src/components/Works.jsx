@@ -17,11 +17,7 @@ const projects = [
         </span>
       </>
     ),
-    features: [
-      "OpenAI-powered responses",
-      "Context-aware Q&A about portfolio",
-      "React chat interface with loading states",
-    ],
+    features: ["OpenAI-powered responses", "Context-aware Q&A about portfolio"],
     tags: ["Netlify Functions", "OpenAI API", "AI Assistant"],
     imageType: "image",
     imageSrc: "/Ai project.jpg",
@@ -120,7 +116,7 @@ const projects = [
         integration.
       </>
     ),
-    features: ["IOT", "Automated Irrigation", "Smart Agriculture"],
+    features: ["IOT", "Automated Irrigation"],
     tags: ["Firebase", "Arduino", "Dashboard Design"],
     imageType: "video",
     imageSrc:
@@ -233,7 +229,7 @@ const projects = [
         to guess the region.
       </>
     ),
-    features: ["Playful Design"],
+    features: ["Gamification for User Retention", "Playful Design"],
     tags: ["Modern UI", "React", "Game"],
     imageType: "image",
     imageSrc: "/fd.png",
@@ -274,12 +270,7 @@ const projects = [
         </span>
       </>
     ),
-    features: [
-      "Intuitive service provider search",
-      "Clean and modern UI design",
-      "User profile management",
-      "Service rating system",
-    ],
+    features: ["Multi-utility app", "Clean and modern UI design"],
     tags: ["Figma", "UI/UX Design", "Hi-Fi Prototype"],
     imageType: "image",
     imageSrc: "/birdie-mockup.png",

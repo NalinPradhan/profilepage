@@ -6,7 +6,7 @@ function Chatbot() {
     {
       role: "assistant",
       content:
-        "Hello! I'm Master Nalin's AI assistant. Feel free to ask me anything about his skills, projects, or experience! 🤖",
+        "Hello! I'm Master Nalin's AI assistant. Feel free to ask me anything about his skills, projects, or experience! ",
     },
   ]);
   const [input, setInput] = useState("");
