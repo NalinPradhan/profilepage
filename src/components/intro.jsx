@@ -22,7 +22,7 @@ function Intro() {
         y: "-100",
         duration: 0.5,
         ease: "power3.inOut",
-      }
+      },
     );
     tl.fromTo(
       full.current,
@@ -36,7 +36,7 @@ function Intro() {
         duration: 1,
         ease: "power3.inOut",
       },
-      "-=0.5"
+      "-=0.5",
     );
   }, []);
 
@@ -105,7 +105,7 @@ function Intro() {
               </li>
               <li>
                 <span className="bg-gradient-to-r from-accent-cyan-dark to-accent-rose bg-clip-text text-transparent font-medium">
-                  AWS, AI, Large Language Models and Agents{" "}
+                  AI, Large Language Models and Agents{" "}
                 </span>
               </li>
               <li>
